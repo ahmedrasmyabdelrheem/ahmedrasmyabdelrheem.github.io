@@ -20,7 +20,7 @@
 
     <style>
         /* ===================================
-           1. CORE RESETS & RESPONSIVE FOUNDATION
+           1. MODERN DARK THEME & FOUNDATION
         =================================== */
         *, *::before, *::after {
             box-sizing: border-box;
@@ -29,18 +29,19 @@
         }
 
         :root {
-            --primary: #00758f;
-            --primary-dark: #004c87;
-            --primary-light: #eef7f9;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+            --bg-main: #0a0e17;           /* خلفية الموقع الرئيسية الداكنة */
+            --bg-card: #131b2e;           /* خلفية الكروت */
+            --bg-card-hover: #17223b;     /* لون الكارت عند التمرير */
+            --border-color: #222f47;      /* حدود الكروت والعناصر */
+            --primary: #38bdf8;           /* لون أزرق سماوي مضيء للـ BI */
+            --primary-dark: #0284c7;      /* أزرق غامق للأزرار */
+            --primary-glow: rgba(56, 189, 248, 0.15);
+            --text-main: #f1f5f9;         /* النصوص الأساسية */
+            --text-muted: #94a3b8;        /* النصوص الثانوية والوصف */
             --radius-md: 12px;
             --radius-lg: 16px;
+            --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.55);
         }
 
         html {
@@ -49,8 +50,8 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
+            color: var(--text-main);
+            background-color: var(--bg-main);
             line-height: 1.6;
             overflow-x: hidden;
             width: 100%;
@@ -69,7 +70,7 @@
 
         .section h2 {
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-            color: var(--text-dark);
+            color: var(--text-main);
             margin-bottom: 35px;
             text-align: center;
             font-weight: 800;
@@ -84,29 +85,32 @@
             background: var(--primary);
             margin: 10px auto 0 auto;
             border-radius: 2px;
+            box-shadow: 0 0 10px var(--primary);
         }
 
         /* ===================================
            2. HEADER & NAVIGATION
         =================================== */
         header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #05080e 0%, #0d1527 100%);
             color: #ffffff;
-            padding: 60px 0 50px 0;
+            padding: 65px 0 50px 0;
             text-align: center;
+            border-bottom: 1px solid var(--border-color);
         }
 
         header h1 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-size: clamp(2.1rem, 5.2vw, 3.3rem);
             font-weight: 800;
             letter-spacing: -0.5px;
             margin-bottom: 12px;
+            color: #ffffff;
         }
 
         header p {
             font-size: clamp(0.95rem, 2.2vw, 1.2rem);
-            color: #94a3b8;
-            font-weight: 500;
+            color: var(--primary);
+            font-weight: 600;
             margin-bottom: 25px;
         }
 
@@ -123,27 +127,30 @@
             justify-content: center;
             width: 44px;
             height: 44px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             color: #ffffff;
             border-radius: 50%;
             text-decoration: none;
             font-size: 1.15rem;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--border-color);
         }
 
         .social-links a:hover {
             background: var(--primary);
+            color: #05080e;
             transform: translateY(-3px);
             border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
         }
 
         nav {
-            background: #ffffff;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid var(--border-color);
         }
 
         nav ul {
@@ -153,7 +160,7 @@
             list-style: none;
             overflow-x: auto;
             white-space: nowrap;
-            padding: 5px 0;
+            padding: 6px 0;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -163,8 +170,8 @@
 
         nav ul li a {
             display: block;
-            padding: 14px 18px;
-            color: #475569;
+            padding: 12px 18px;
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
@@ -182,10 +189,10 @@
             display: flex;
             align-items: center;
             gap: 40px;
-            background: var(--card-bg);
+            background: var(--bg-card);
             padding: 40px;
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--border-color);
         }
 
@@ -195,14 +202,18 @@
             border-radius: 50%;
             object-fit: cover;
             flex-shrink: 0;
-            border: 4px solid var(--primary-light);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
         }
 
         .about-text p {
             font-size: 1.02rem;
-            color: #334155;
+            color: var(--text-muted);
             margin-bottom: 16px;
+        }
+
+        .about-text strong {
+            color: var(--text-main);
         }
 
         .about-text p:last-child {
@@ -219,13 +230,13 @@
         }
 
         .project-card {
-            background: var(--card-bg);
+            background: var(--bg-card);
             border-radius: var(--radius-lg);
             padding: 30px 24px;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--border-color);
             border-top: 4px solid var(--primary);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -233,7 +244,8 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-hover);
+            border-color: #334769;
         }
 
         .project-header {
@@ -246,7 +258,7 @@
         .project-icon {
             width: 46px;
             height: 46px;
-            background: var(--primary-light);
+            background: var(--primary-glow);
             color: var(--primary);
             border-radius: var(--radius-md);
             display: flex;
@@ -254,11 +266,12 @@
             justify-content: center;
             font-size: 1.3rem;
             flex-shrink: 0;
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         .project-card h3 {
             font-size: 1.18rem;
-            color: var(--text-dark);
+            color: var(--text-main);
             line-height: 1.35;
             font-weight: 700;
         }
@@ -271,11 +284,11 @@
         }
 
         .tech-tag {
-            background: #f1f5f9;
-            color: #475569;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--primary);
             font-size: 0.76rem;
             font-weight: 600;
-            padding: 4px 9px;
+            padding: 4px 10px;
             border-radius: 6px;
             border: 1px solid var(--border-color);
         }
@@ -306,25 +319,27 @@
             flex: 1;
             text-align: center;
             background: var(--primary);
-            color: #ffffff;
+            color: #05080e;
             border: 1px solid var(--primary);
             min-height: 42px;
         }
 
         .btn:hover {
-            background: var(--primary-dark);
-            border-color: var(--primary-dark);
+            background: #7dd3fc;
+            border-color: #7dd3fc;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.35);
         }
 
         .btn-secondary {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.03);
             color: var(--primary);
-            border: 1px solid var(--primary);
+            border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
-            background: var(--primary-light);
-            color: var(--primary-dark);
+            background: var(--primary-glow);
+            border-color: var(--primary);
+            color: #ffffff;
         }
 
         /* ===================================
@@ -337,10 +352,10 @@
         }
 
         .skill-column {
-            background: var(--card-bg);
+            background: var(--bg-card);
             border-radius: var(--radius-lg);
             padding: 28px 24px;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--border-color);
         }
 
@@ -361,6 +376,7 @@
         .skill-header h3 {
             font-size: 1.15rem;
             font-weight: 700;
+            color: var(--text-main);
         }
 
         .skill-list {
@@ -372,7 +388,7 @@
             padding-left: 20px;
             margin-bottom: 10px;
             font-size: 0.95rem;
-            color: #334155;
+            color: var(--text-muted);
             font-weight: 500;
         }
 
@@ -396,10 +412,10 @@
         }
 
         .cert-card {
-            background: var(--card-bg);
+            background: var(--bg-card);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
@@ -408,13 +424,14 @@
 
         .cert-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-hover);
+            border-color: #334769;
         }
 
         .cert-img-container {
             width: 100%;
             height: 210px;
-            background-color: #f1f5f9;
+            background-color: #0b1120;
             border-bottom: 1px solid var(--border-color);
             overflow: hidden;
             position: relative;
@@ -442,7 +459,7 @@
 
         .cert-details h3 {
             font-size: 1.12rem;
-            color: var(--text-dark);
+            color: var(--text-main);
             margin-bottom: 8px;
             font-weight: 700;
             line-height: 1.35;
@@ -466,10 +483,11 @@
             margin-top: auto;
             font-size: 0.82rem;
             color: var(--primary);
-            background: var(--primary-light);
+            background: var(--primary-glow);
             padding: 4px 12px;
             border-radius: 20px;
             font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         /* ===================================
@@ -478,10 +496,10 @@
         .contact-form {
             max-width: 650px;
             margin: 0 auto;
-            background: var(--card-bg);
+            background: var(--bg-card);
             padding: 35px 30px;
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--border-color);
         }
 
@@ -501,7 +519,7 @@
             margin-bottom: 6px;
             font-size: 0.9rem;
             font-weight: 600;
-            color: #334155;
+            color: var(--text-main);
         }
 
         .form-group input,
@@ -513,14 +531,15 @@
             font-family: inherit;
             font-size: 0.95rem;
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
-            background: #ffffff;
+            background: #0b1120;
+            color: #ffffff;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 117, 143, 0.12);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
         }
 
         .contact-form button[type="submit"] {
@@ -532,11 +551,12 @@
         }
 
         footer {
-            background: #0f172a;
-            color: #94a3b8;
+            background: #05080e;
+            color: var(--text-muted);
             padding: 30px 0;
             text-align: center;
             font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
         }
 
         /* ===================================
@@ -638,8 +658,8 @@
         <div class="about-content">
             <img src="assets/images/profile-photo.jpg" alt="Ahmed Rasmy" class="profile-photo">
             <div class="about-text">
-                <p>I am a <strong>Data & Business Intelligence Analyst</strong> with a degree in Management Information Systems (MIS) and intensive technical training from DEPI and NTI[cite: 6]. I specialize in bridging the gap between raw operational data and executive decision-making.</p>
-                <p>My expertise centers on designing relational Star Schema models, authoring complex DAX measures, building automated end-to-end data pipelines, and developing interactive Power BI dashboards that deliver measurable business impact[cite: 6]. This portfolio highlights practical projects spanning customer behavioral analytics, manufacturing operations, and executive sales intelligence[cite: 6].</p>
+                <p>I am a <strong>Data & Business Intelligence Analyst</strong> with a degree in Management Information Systems (MIS) and intensive technical training from DEPI and NTI. I specialize in bridging the gap between raw operational data and executive decision-making.</p>
+                <p>My expertise centers on designing relational Star Schema models, authoring complex DAX measures, building automated end-to-end data pipelines, and developing interactive Power BI dashboards that deliver measurable business impact. This portfolio highlights practical projects spanning customer behavioral analytics, manufacturing operations, and executive sales intelligence.</p>
             </div>
         </div>
     </div>
@@ -666,7 +686,7 @@
                         <span class="tech-tag">RFM Modeling</span>
                     </div>
                     <p class="project-desc">
-                        Consolidated 12 months of sales transactions via T-SQL using NTILE(5) window functions to compute RFM scores[cite: 6]. Built behavioral segmentation logic classifying 287 customers into cohorts (~26% Hibernating, ~22% Champions) with dynamic Power BI drill-downs[cite: 6].
+                        Consolidated 12 months of sales transactions via T-SQL using NTILE(5) window functions to compute RFM scores. Built behavioral segmentation logic classifying 287 customers into cohorts (~26% Hibernating, ~22% Champions) with dynamic Power BI drill-downs.
                     </p>
                 </div>
                 <div class="project-buttons">
@@ -690,7 +710,7 @@
                         <span class="tech-tag">ETL</span>
                     </div>
                     <p class="project-desc">
-                        Architected an end-to-end operational pipeline deploying 3 Google Forms across 4 production lines[cite: 6]. Standardized QC logs in Power Query and authored DAX models across 25K+ garments to track an overall 44.61% scrap rate and 5 line stoppages with an 8-hour cloud refresh[cite: 4, 6].
+                        Architected an end-to-end operational pipeline deploying 3 Google Forms across 4 production lines. Standardized QC logs in Power Query and authored DAX models across 25K+ garments to track an overall 44.61% scrap rate and 5 line stoppages with an 8-hour cloud refresh.
                     </p>
                 </div>
                 <div class="project-buttons">
@@ -713,7 +733,7 @@
                         <span class="tech-tag">Advanced DAX</span>
                     </div>
                     <p class="project-desc">
-                        Engineered a relational Star Schema in Power Pivot linking Fact orders to dimensional models[cite: 6]. Developed iterator DAX measures (SUMX, AVERAGEX, DATEDIFF) analyzing $3.5M+ in revenue across 1,000 orders to evaluate delivery cycles and seasonal occasion spikes[cite: 6].
+                        Engineered a relational Star Schema in Power Pivot linking Fact orders to dimensional models. Developed iterator DAX measures (SUMX, AVERAGEX, DATEDIFF) analyzing $3.5M+ in revenue across 1,000 orders to evaluate delivery cycles and seasonal occasion spikes.
                     </p>
                 </div>
                 <div class="project-buttons">
@@ -794,8 +814,8 @@
                 </div>
                 <div class="cert-details">
                     <h3>Data Analytics - Microsoft Power BI</h3>
-                    <p class="cert-issuer"><i class="fas fa-building-columns"></i> Digital Egypt Pioneers Initiative (DEPI)[cite: 6]</p>
-                    <span class="cert-date">2024 – 2025[cite: 6]</span>
+                    <p class="cert-issuer"><i class="fas fa-building-columns"></i> Digital Egypt Pioneers Initiative (DEPI)</p>
+                    <span class="cert-date">2024 – 2025</span>
                 </div>
             </div>
 
@@ -806,8 +826,8 @@
                 </div>
                 <div class="cert-details">
                     <h3>Data Analysis Training Program</h3>
-                    <p class="cert-issuer"><i class="fas fa-building-columns"></i> National Telecommunication Institute (NTI) & Creativa[cite: 6]</p>
-                    <span class="cert-date">March 2026[cite: 6]</span>
+                    <p class="cert-issuer"><i class="fas fa-building-columns"></i> National Telecommunication Institute (NTI) & Creativa</p>
+                    <span class="cert-date">March 2026</span>
                 </div>
             </div>
 
@@ -818,8 +838,8 @@
                 </div>
                 <div class="cert-details">
                     <h3>HCIA-AI V4.0 Course Certificate</h3>
-                    <p class="cert-issuer"><i class="fas fa-building-columns"></i> Huawei ICT Academy[cite: 6]</p>
-                    <span class="cert-date">November 2025[cite: 6]</span>
+                    <p class="cert-issuer"><i class="fas fa-building-columns"></i> Huawei ICT Academy</p>
+                    <span class="cert-date">November 2025</span>
                 </div>
             </div>
 
