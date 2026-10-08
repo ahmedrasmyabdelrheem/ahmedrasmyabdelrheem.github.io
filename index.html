@@ -1,635 +1,648 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-    <title>Ahmed Rasmy | Data & BI Analyst Portfolio</title>
+```
+<title>Ahmed Rasmy | Data & BI Analyst Portfolio</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" href="favicon-32x32.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="favicon-32x32.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <style>
-        /* ===================================
-           1. MODERN DARK THEME & FOUNDATION
-        =================================== */
+<style>
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    /* ===================================
+       1. MODERN DARK THEME & FOUNDATION
+    =================================== */
 
-        :root {
-            --bg-main: #0a0e17;
-            --bg-card: #131b2e;
-            --bg-card-hover: #17223b;
-            --border-color: #222f47;
-            --primary: #38bdf8;
-            --primary-dark: #0284c7;
-            --primary-glow: rgba(56, 189, 248, 0.15);
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
-            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.55);
-        }
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    :root {
+        --bg-main: #0a0e17;
+        --bg-card: #131b2e;
+        --bg-card-hover: #17223b;
+        --border-color: #222f47;
+        --primary: #38bdf8;
+        --primary-dark: #0284c7;
+        --primary-glow: rgba(56, 189, 248, 0.15);
+        --text-main: #f1f5f9;
+        --text-muted: #94a3b8;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+        --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.55);
+    }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            width: 100%;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-main);
+        background-color: var(--bg-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        color: var(--text-main);
+        margin-bottom: 35px;
+        text-align: center;
+        font-weight: 800;
+        position: relative;
+    }
+
+    .section h2::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: var(--primary);
+        margin: 10px auto 0 auto;
+        border-radius: 2px;
+        box-shadow: 0 0 10px var(--primary);
+    }
+
+
+    /* ===================================
+       2. HEADER & NAVIGATION
+    =================================== */
+
+    header {
+        background: linear-gradient(135deg, #05080e 0%, #0d1527 100%);
+        color: #ffffff;
+        padding: 65px 0 50px 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    header h1 {
+        font-size: clamp(2.1rem, 5.2vw, 3.3rem);
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+        color: #ffffff;
+    }
+
+    header p {
+        font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 1.15rem;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+    }
+
+    .social-links a:hover {
+        background: var(--primary);
+        color: #05080e;
+        transform: translateY(-3px);
+        border-color: var(--primary);
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    }
+
+    nav {
+        background: rgba(10, 14, 23, 0.85);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 6px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 18px;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary);
+    }
+
+
+    /* ===================================
+       3. ABOUT ME
+    =================================== */
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background: var(--bg-card);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-color);
+    }
+
+    .profile-photo {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        border: 3px solid var(--primary);
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+    }
+
+    .about-text p {
+        font-size: 1.02rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+    }
+
+    .about-text strong {
+        color: var(--text-main);
+    }
+
+    .about-text p:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* ===================================
+       4. FEATURED PROJECTS
+    =================================== */
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+        gap: 28px;
+    }
+
+    .project-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: 30px 24px;
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-color);
+        border-top: 4px solid var(--primary);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+        border-color: #334769;
+    }
+
+    .project-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .project-icon {
+        width: 46px;
+        height: 46px;
+        background: var(--primary-glow);
+        color: var(--primary);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .project-card h3 {
+        font-size: 1.18rem;
+        color: var(--text-main);
+        line-height: 1.35;
+        font-weight: 700;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 14px 0 16px 0;
+    }
+
+    .tech-tag {
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--primary);
+        font-size: 0.76rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+    }
+
+    .project-desc {
+        font-size: 0.94rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .project-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: all 0.2s ease;
+        flex: 1;
+        text-align: center;
+        background: var(--primary);
+        color: #05080e;
+        border: 1px solid var(--primary);
+        min-height: 42px;
+    }
+
+    .btn:hover {
+        background: #7dd3fc;
+        border-color: #7dd3fc;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.35);
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--primary);
+        border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+        background: var(--primary-glow);
+        border-color: var(--primary);
+        color: #ffffff;
+    }
+
+
+    /* ===================================
+       5. TECHNICAL SKILLSET
+    =================================== */
+
+    .skills-table {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+        gap: 25px;
+    }
+
+    .skill-column {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-color);
+    }
+
+    .skill-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .skill-header i {
+        font-size: 1.4rem;
+        color: var(--primary);
+    }
+
+    .skill-header h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-main);
+    }
+
+    .skill-list {
+        list-style: none;
+    }
+
+    .skill-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .skill-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+
+    /* ===================================
+       6. CERTIFICATIONS
+    =================================== */
+
+    .certifications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+        gap: 26px;
+    }
+
+    .cert-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cert-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+        border-color: #334769;
+    }
+
+    .cert-img-container {
+        width: 100%;
+        height: 210px;
+        background-color: #0b1120;
+        border-bottom: 1px solid var(--border-color);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .cert-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform 0.4s ease;
+        display: block;
+    }
+
+    .cert-card:hover .cert-img-container img {
+        transform: scale(1.03);
+    }
+
+    .cert-details {
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .cert-details h3 {
+        font-size: 1.12rem;
+        color: var(--text-main);
+        margin-bottom: 8px;
+        font-weight: 700;
+        line-height: 1.35;
+    }
+
+    .cert-issuer {
+        font-size: 0.92rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .cert-issuer i {
+        color: var(--primary);
+    }
+
+    .cert-date {
+        align-self: flex-start;
+        margin-top: auto;
+        font-size: 0.82rem;
+        color: var(--primary);
+        background: var(--primary-glow);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+
+    /* ===================================
+       7. CONTACT FORM & FOOTER
+    =================================== */
+
+    .contact-form {
+        max-width: 650px;
+        margin: 0 auto;
+        background: var(--bg-card);
+        padding: 35px 30px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        border: 1px solid var(--border-color);
+    }
+
+    .contact-form p {
+        text-align: center;
+        margin-bottom: 25px;
+        color: var(--text-muted);
+        font-size: 0.98rem;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-main);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        background: #0b1120;
+        color: #ffffff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    .contact-form button[type="submit"] {
+        width: 100%;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 12px;
+        border: none;
+    }
+
+    footer {
+        background: #05080e;
+        color: var(--text-muted);
+        padding: 30px 0;
+        text-align: center;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--border-color);
+    }
+
+
+    /* ===================================
+       8. MOBILE & TABLET
+    =================================== */
+
+    @media (max-width: 768px) {
 
         .section {
-            padding: 70px 0;
+            padding: 50px 0;
         }
-
-        .section h2 {
-            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-            color: var(--text-main);
-            margin-bottom: 35px;
-            text-align: center;
-            font-weight: 800;
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto 0 auto;
-            border-radius: 2px;
-            box-shadow: 0 0 10px var(--primary);
-        }
-
-        /* ===================================
-           2. HEADER & NAVIGATION
-        =================================== */
-
-        header {
-            background: linear-gradient(135deg, #05080e 0%, #0d1527 100%);
-            color: #ffffff;
-            padding: 65px 0 50px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        header h1 {
-            font-size: clamp(2.1rem, 5.2vw, 3.3rem);
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        header p {
-            font-size: clamp(0.95rem, 2.2vw, 1.2rem);
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #ffffff;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            color: #05080e;
-            transform: translateY(-3px);
-            border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-        }
-
-        nav {
-            background: rgba(10, 14, 23, 0.85);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 6px 0;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        nav ul::-webkit-scrollbar {
-            display: none;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 12px 18px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-
-        /* ===================================
-           3. ABOUT ME
-        =================================== */
 
         .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border-color);
-        }
-
-        .profile-photo {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex-shrink: 0;
-            border: 3px solid var(--primary);
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
-        }
-
-        .about-text p {
-            font-size: 1.02rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .about-text strong {
-            color: var(--text-main);
-        }
-
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ===================================
-           4. FEATURED PROJECTS
-        =================================== */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-            gap: 28px;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 30px 24px;
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border-color);
-            border-top: 4px solid var(--primary);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: #334769;
-        }
-
-        .project-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .project-icon {
-            width: 46px;
-            height: 46px;
-            background: var(--primary-glow);
-            color: var(--primary);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .project-card h3 {
-            font-size: 1.18rem;
-            color: var(--text-main);
-            line-height: 1.35;
-            font-weight: 700;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: 14px 0 16px 0;
-        }
-
-        .tech-tag {
-            background: rgba(255, 255, 255, 0.04);
-            color: var(--primary);
-            font-size: 0.76rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-        }
-
-        .project-desc {
-            font-size: 0.94rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .project-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.88rem;
-            transition: all 0.2s ease;
-            flex: 1;
             text-align: center;
-            background: var(--primary);
-            color: #05080e;
-            border: 1px solid var(--primary);
-            min-height: 42px;
-        }
-
-        .btn:hover {
-            background: #7dd3fc;
-            border-color: #7dd3fc;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.35);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-glow);
-            border-color: var(--primary);
-            color: #ffffff;
-        }
-
-        /* ===================================
-           5. TECHNICAL SKILLSET
-        =================================== */
-
-        .skills-table {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+            padding: 30px 20px;
             gap: 25px;
         }
 
-        .skill-column {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 28px 24px;
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border-color);
+        .profile-photo {
+            width: 140px;
+            height: 140px;
         }
 
-        .skill-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border-color);
+        .contact-form {
+            padding: 25px 20px;
         }
 
-        .skill-header i {
-            font-size: 1.4rem;
-            color: var(--primary);
+        nav ul {
+            justify-content: flex-start;
+            padding: 4px 10px;
         }
 
-        .skill-header h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .skill-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        /* ===================================
-           6. CERTIFICATIONS
-        =================================== */
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
-            gap: 26px;
-        }
-
-        .cert-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: #334769;
+        nav ul li a {
+            padding: 12px 14px;
+            font-size: 0.9rem;
         }
 
         .cert-img-container {
-            width: 100%;
-            height: 210px;
-            background-color: #0b1120;
-            border-bottom: 1px solid var(--border-color);
-            overflow: hidden;
-            position: relative;
+            height: 190px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .project-buttons {
+            flex-direction: column;
         }
 
-        .cert-img-container img {
+        .btn {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            transition: transform 0.4s ease;
-            display: block;
         }
 
-        .cert-card:hover .cert-img-container img {
-            transform: scale(1.03);
+        .project-card {
+            padding: 24px 18px;
         }
 
         .cert-details {
-            padding: 22px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+            padding: 18px;
         }
 
-        .cert-details h3 {
-            font-size: 1.12rem;
-            color: var(--text-main);
-            margin-bottom: 8px;
-            font-weight: 700;
-            line-height: 1.35;
+        .cert-img-container {
+            height: 170px;
         }
+    }
 
-        .cert-issuer {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+</style>
+```
 
-        .cert-issuer i {
-            color: var(--primary);
-        }
-
-        .cert-date {
-            align-self: flex-start;
-            margin-top: auto;
-            font-size: 0.82rem;
-            color: var(--primary);
-            background: var(--primary-glow);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        /* ===================================
-           7. CONTACT FORM & FOOTER
-        =================================== */
-
-        .contact-form {
-            max-width: 650px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            padding: 35px 30px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-form p {
-            text-align: center;
-            margin-bottom: 25px;
-            color: var(--text-muted);
-            font-size: 0.98rem;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-            background: #0b1120;
-            color: #ffffff;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-        }
-
-        .contact-form button[type="submit"] {
-            width: 100%;
-            cursor: pointer;
-            font-size: 1rem;
-            padding: 12px;
-            border: none;
-        }
-
-        footer {
-            background: #05080e;
-            color: var(--text-muted);
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* ===================================
-           8. MOBILE & TABLET
-        =================================== */
-
-        @media (max-width: 768px) {
-
-            .section {
-                padding: 50px 0;
-            }
-
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 20px;
-                gap: 25px;
-            }
-
-            .profile-photo {
-                width: 140px;
-                height: 140px;
-            }
-
-            .contact-form {
-                padding: 25px 20px;
-            }
-
-            nav ul {
-                justify-content: flex-start;
-                padding: 4px 10px;
-            }
-
-            nav ul li a {
-                padding: 12px 14px;
-                font-size: 0.9rem;
-            }
-
-            .cert-img-container {
-                height: 190px;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .project-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .project-card {
-                padding: 24px 18px;
-            }
-
-            .cert-details {
-                padding: 18px;
-            }
-
-            .cert-img-container {
-                height: 170px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -639,81 +652,96 @@
 =================================== -->
 
 <header>
-    <div class="container">
 
-        <h1>Ahmed Rasmy</h1>
+```
+<div class="container">
 
-        <p>
-            Data & Business Intelligence Analyst |
-            SQL • Power BI • DAX
-        </p>
+    <h1>Ahmed Rasmy</h1>
 
-        <div class="social-links">
+    <p>
+        Data & Business Intelligence Analyst |
+        SQL • Power BI • DAX
+    </p>
 
-            <a href="https://www.linkedin.com/in/ahmedrasmyabdelrheem"
-               target="_blank"
-               rel="noopener noreferrer"
-               title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
+    <div class="social-links">
 
-            <a href="https://github.com/ahmedrasmyabdelrheem"
-               target="_blank"
-               rel="noopener noreferrer"
-               title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
+        <a
+            href="https://www.linkedin.com/in/ahmedrasmyabdelrheem"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+        >
+            <i class="fab fa-linkedin"></i>
+        </a>
 
-            <a href="mailto:ahmed.rasmy.abdelrheem@gmail.com"
-               title="Email Me">
-                <i class="fas fa-envelope"></i>
-            </a>
+        <a
+            href="https://github.com/ahmedrasmyabdelrheem"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+        >
+            <i class="fab fa-github"></i>
+        </a>
 
-            <a href="assets/Ahmed_Rasmy_CV.pdf"
-               download
-               title="Download CV">
-                <i class="fas fa-file-arrow-down"></i>
-            </a>
+        <a
+            href="mailto:ahmed.rasmy.abdelrheem@gmail.com"
+            title="Email Me"
+        >
+            <i class="fas fa-envelope"></i>
+        </a>
 
-        </div>
+        <a
+            href="assets/Ahmed_Rasmy_CV.pdf"
+            download
+            title="Download CV"
+        >
+            <i class="fas fa-file-arrow-down"></i>
+        </a>
+
     </div>
-</header>
 
+</div>
+```
+
+</header>
 
 <!-- ===================================
      NAVIGATION
 =================================== -->
 
 <nav>
-    <div class="container">
 
-        <ul>
+```
+<div class="container">
 
-            <li>
-                <a href="#about">About</a>
-            </li>
+    <ul>
 
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
+        <li>
+            <a href="#about">About</a>
+        </li>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
 
-            <li>
-                <a href="#certificates">Certifications</a>
-            </li>
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+        <li>
+            <a href="#certificates">Certifications</a>
+        </li>
 
-        </ul>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
 
-    </div>
+    </ul>
+
+</div>
+```
+
 </nav>
-
 
 <!-- ===================================
      ABOUT ME
@@ -721,53 +749,54 @@
 
 <section id="about" class="section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>About Me</h2>
+    <h2>About Me</h2>
 
-        <div class="about-content">
+    <div class="about-content">
 
-            <img
-                src="assets/images/profile-photo.jpg"
-                alt="Ahmed Rasmy"
-                class="profile-photo"
-            >
+        <img
+            src="assets/images/profile-photo.jpg"
+            alt="Ahmed Rasmy"
+            class="profile-photo"
+        >
 
-            <div class="about-text">
+        <div class="about-text">
 
-                <p>
-                    I am a
-                    <strong>Data & Business Intelligence Analyst</strong>
-                    with a degree in Management Information Systems (MIS)
-                    and intensive technical training from DEPI and NTI.
-                    I specialize in transforming raw operational data into
-                    actionable insights that support better business decisions.
-                </p>
+            <p>
+                I am a
+                <strong>Data & Business Intelligence Analyst</strong>
+                with a degree in Management Information Systems (MIS)
+                and intensive technical training from DEPI and NTI.
+                I specialize in transforming raw operational data into
+                actionable insights that support better business decisions.
+            </p>
 
-                <p>
-                    My expertise includes data analysis, relational data modeling
-                    using Star Schema, DAX, SQL, Python, Excel, and Power BI.
-                    I focus on building interactive dashboards, developing
-                    meaningful KPIs, and applying data-driven techniques to
-                    understand business performance and customer behavior.
-                </p>
+            <p>
+                My expertise includes data analysis, relational data modeling
+                using Star Schema, DAX, SQL, Python, Excel, and Power BI.
+                I focus on building interactive dashboards, developing
+                meaningful KPIs, and applying data-driven techniques to
+                understand business performance and customer behavior.
+            </p>
 
-                <p>
-                    This portfolio showcases practical projects across customer
-                    analytics, manufacturing operations, sales intelligence,
-                    and business performance analysis—demonstrating how I
-                    combine technical skills with business understanding to
-                    solve real-world analytical problems.
-                </p>
-
-            </div>
+            <p>
+                This portfolio showcases practical projects across customer
+                analytics, manufacturing operations, sales intelligence,
+                and business performance analysis—demonstrating how I
+                combine technical skills with business understanding to
+                solve real-world analytical problems.
+            </p>
 
         </div>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- ===================================
      FEATURED PROJECTS
@@ -775,263 +804,247 @@
 
 <section id="projects" class="section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>Featured Projects</h2>
+    <h2>Featured Projects</h2>
 
-        <div class="projects-grid">
+    <div class="projects-grid">
 
 
-            <!-- PROJECT 1: RFM -->
+        <!-- PROJECT 1: RFM -->
 
-            <div class="project-card">
+        <div class="project-card">
 
-                <div>
+            <div>
 
-                    <div class="project-header">
+                <div class="project-header">
 
-                        <div class="project-icon">
-                            <i class="fas fa-users-gear"></i>
-                        </div>
-
-                        <h3>
-                            Customer Behavioral Segmentation & RFM Analysis
-                        </h3>
-
+                    <div class="project-icon">
+                        <i class="fas fa-users-gear"></i>
                     </div>
 
-
-                    <div class="project-tags">
-
-                        <span class="tech-tag">
-                            SQL Server
-                        </span>
-
-                        <span class="tech-tag">
-                            T-SQL
-                        </span>
-
-                        <span class="tech-tag">
-                            Power BI
-                        </span>
-
-                        <span class="tech-tag">
-                            DAX
-                        </span>
-
-                        <span class="tech-tag">
-                            RFM Modeling
-                        </span>
-
-                    </div>
-
-
-                    <p class="project-desc">
-
-                        Analyzed 12 months of customer transaction data using
-                        T-SQL and applied RFM (Recency, Frequency, Monetary)
-                        analysis to evaluate customer purchasing behavior.
-                        Segmented 287 customers into behavioral groups such as
-                        Champions, Loyal Customers, At Risk, and Hibernating,
-                        then built an interactive Power BI dashboard to compare
-                        customer segments and identify differences in customer value.
-
-                    </p>
+                    <h3>
+                        Customer Behavioral Segmentation & RFM Analysis
+                    </h3>
 
                 </div>
 
+                <div class="project-tags">
 
-                <div class="project-buttons">
+                    <span class="tech-tag">
+                        SQL Server
+                    </span>
 
-                    <a
-                        href="https://github.com/ahmedrasmyabdelrheem/rfm-customer-segmentation"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn"
-                    >
-                        Documentation
-                    </a>
+                    <span class="tech-tag">
+                        T-SQL
+                    </span>
 
-                    <a
-                        href="https://app.powerbi.com/view?r=eyJrIjoiOTNmNDQ0OTItM2YxMC00MTdhLWE0MGUtZmFmMGJjMDhlM2MzIiwidCI6ImVhZjYyNGM4LWEwYzQtNDE5NS04N2QyLTQ0M2U1ZDc1MTZjZCIsImMiOjh9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-                        View Dashboard
-                    </a>
+                    <span class="tech-tag">
+                        Power BI
+                    </span>
+
+                    <span class="tech-tag">
+                        DAX
+                    </span>
+
+                    <span class="tech-tag">
+                        RFM Modeling
+                    </span>
 
                 </div>
+
+                <p class="project-desc">
+                    Analyzed 12 months of customer transaction data using
+                    T-SQL and applied RFM (Recency, Frequency, Monetary)
+                    analysis to evaluate customer purchasing behavior.
+                    Segmented 287 customers into behavioral groups such as
+                    Champions, Loyal Customers, At Risk, and Hibernating,
+                    then built an interactive Power BI dashboard to compare
+                    customer segments and identify differences in customer value.
+                </p>
 
             </div>
 
+            <div class="project-buttons">
 
-            <!-- PROJECT 2: MANUFACTURING -->
+                <a
+                    href="https://github.com/ahmedrasmyabdelrheem/rfm-customer-segmentation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn"
+                >
+                    Documentation
+                </a>
 
-            <div class="project-card">
-
-                <div>
-
-                    <div class="project-header">
-
-                        <div class="project-icon">
-                            <i class="fas fa-industry"></i>
-                        </div>
-
-                        <h3>
-                            Manufacturing Quality Control & Production Analytics
-                        </h3>
-
-                    </div>
-
-
-                    <div class="project-tags">
-
-                        <span class="tech-tag">
-                            Power BI
-                        </span>
-
-                        <span class="tech-tag">
-                            Power Query
-                        </span>
-
-                        <span class="tech-tag">
-                            DAX
-                        </span>
-
-                        <span class="tech-tag">
-                            Google Sheets / Forms
-                        </span>
-
-                        <span class="tech-tag">
-                            Data Collection
-                        </span>
-
-                    </div>
-
-
-                    <p class="project-desc">
-
-                        Designed a structured production data collection workflow
-                        for a garment manufacturing scenario using 3 role-based
-                        Google Forms across 4 production lines. Production data
-                        is collected through the forms and connected to Google
-                        Sheets, then cleaned and transformed with Power Query.
-                        A Power BI dashboard provides management with visibility
-                        into production quality, scrap, downtime, recurring
-                        issues, and line performance.
-
-                    </p>
-
-                </div>
-
-
-                <div class="project-buttons">
-
-                    <a
-                        href="https://github.com/ahmedrasmyabdelrheem/manufacturing-qc-dashboard"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn"
-                    >
-                        Documentation
-                    </a>
-
-                    <a
-                        href="https://app.powerbi.com/view?r=eyJrIjoiZjQ1OTU4NzgtMTdiNi00MDU1LTk5ZGUtMGJkMWY1NzhhZWVmIiwidCI6ImVhZjYyNGM4LWEwYzQtNDE5NS04N2QyLTQ0M2U1ZDc1MTZjZCIsImMiOjh9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-                        View Dashboard
-                    </a>
-
-                </div>
+                <a
+                    href="https://app.powerbi.com/view?r=eyJrIjoiOTNmNDQ0OTItM2YxMC00MTdhLWE0MGUtZmFmMGJjMDhlM2MzIiwidCI6ImVhZjYyNGM4LWEwYzQtNDE5NS04N2QyLTQ0M2U1ZDc1MTZjZCIsImMiOjh9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                >
+                    View Dashboard
+                </a>
 
             </div>
 
+        </div>
 
-            <!-- PROJECT 3: SALES -->
 
-            <div class="project-card">
+        <!-- PROJECT 2: MANUFACTURING -->
 
-                <div>
+        <div class="project-card">
 
-                    <div class="project-header">
+            <div>
 
-                        <div class="project-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
+                <div class="project-header">
 
-                        <h3>
-                            Sales & Revenue Performance Dashboard
-                        </h3>
-
+                    <div class="project-icon">
+                        <i class="fas fa-industry"></i>
                     </div>
 
-
-                    <div class="project-tags">
-
-                        <span class="tech-tag">
-                            Microsoft Excel
-                        </span>
-
-                        <span class="tech-tag">
-                            Power Pivot
-                        </span>
-
-                        <span class="tech-tag">
-                            Star Schema
-                        </span>
-
-                        <span class="tech-tag">
-                            DAX
-                        </span>
-
-                    </div>
-
-
-                    <p class="project-desc">
-
-                        Designed an interactive sales performance dashboard
-                        using a relational Star Schema in Power Pivot.
-                        Developed sales and operational KPIs to monitor
-                        performance across products, customers, and time periods,
-                        helping decision-makers identify top-performing products
-                        and customers, track sales trends, and detect areas of
-                        strong or weak performance.
-
-                    </p>
+                    <h3>
+                        Manufacturing Quality Control & Production Analytics
+                    </h3>
 
                 </div>
 
+                <div class="project-tags">
 
-                <div class="project-buttons">
+                    <span class="tech-tag">
+                        Power BI
+                    </span>
 
-                    <a
-                        href="https://github.com/ahmedrasmyabdelrheem/sales-performance-dashboard"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn"
-                    >
-                        Documentation
-                    </a>
+                    <span class="tech-tag">
+                        Power Query
+                    </span>
 
-                    <a
-                        href="assets/Sales_Performance_Dashboard.xlsx"
-                        download="Sales_Performance_Dashboard.xlsx"
-                        class="btn btn-secondary"
-                    >
-                        <i
-                            class="fas fa-file-arrow-down"
-                            style="margin-right: 6px;"
-                        ></i>
+                    <span class="tech-tag">
+                        DAX
+                    </span>
 
-                        Download (.xlsx)
+                    <span class="tech-tag">
+                        Google Sheets / Forms
+                    </span>
 
-                    </a>
+                    <span class="tech-tag">
+                        Data Collection
+                    </span>
 
                 </div>
+
+                <p class="project-desc">
+                    Designed a structured production data collection workflow
+                    for a garment manufacturing scenario using 3 role-based
+                    Google Forms across 4 production lines. Production data
+                    is collected through the forms and connected to Google
+                    Sheets, then cleaned and transformed with Power Query.
+                    A Power BI dashboard provides management with visibility
+                    into production quality, scrap, downtime, recurring
+                    issues, and line performance.
+                </p>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a
+                    href="https://github.com/ahmedrasmyabdelrheem/manufacturing-qc-dashboard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn"
+                >
+                    Documentation
+                </a>
+
+                <a
+                    href="https://app.powerbi.com/view?r=eyJrIjoiZjQ1OTU4NzgtMTdiNi00MDU1LTk5ZGUtMGJkMWY1NzhhZWVmIiwidCI6ImVhZjYyNGM4LWEwYzQtNDE5NS04N2QyLTQ0M2U1ZDc1MTZjZCIsImMiOjh9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                >
+                    View Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 3: SALES -->
+
+        <div class="project-card">
+
+            <div>
+
+                <div class="project-header">
+
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+
+                    <h3>
+                        Sales & Revenue Performance Dashboard
+                    </h3>
+
+                </div>
+
+                <div class="project-tags">
+
+                    <span class="tech-tag">
+                        Microsoft Excel
+                    </span>
+
+                    <span class="tech-tag">
+                        Power Pivot
+                    </span>
+
+                    <span class="tech-tag">
+                        Star Schema
+                    </span>
+
+                    <span class="tech-tag">
+                        DAX
+                    </span>
+
+                </div>
+
+                <p class="project-desc">
+                    Designed an interactive sales performance dashboard
+                    using a relational Star Schema in Power Pivot.
+                    Developed sales and operational KPIs to monitor
+                    performance across products, customers, and time periods,
+                    helping decision-makers identify top-performing products
+                    and customers, track sales trends, and detect areas of
+                    strong or weak performance.
+                </p>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a
+                    href="https://github.com/ahmedrasmyabdelrheem/sales-performance-dashboard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn"
+                >
+                    Documentation
+                </a>
+
+                <a
+                    href="assets/Sales_Performance_Dashboard.xlsx"
+                    download="Sales_Performance_Dashboard.xlsx"
+                    class="btn btn-secondary"
+                >
+                    <i
+                        class="fas fa-file-arrow-down"
+                        style="margin-right: 6px;"
+                    ></i>
+
+                    Download (.xlsx)
+
+                </a>
 
             </div>
 
@@ -1039,154 +1052,154 @@
 
     </div>
 
+</div>
+```
+
 </section>
 
-
-```html
 <!-- ===================================
      TECHNICAL SKILLS
 =================================== -->
 
 <section id="skills" class="section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>Technical Skillset</h2>
+    <h2>Technical Skillset</h2>
 
-        <div class="skills-table">
+    <div class="skills-table">
 
 
-            <!-- COLUMN 1: DATA ANALYSIS & BI -->
+        <!-- COLUMN 1: DATA ANALYSIS & BI -->
 
-            <div class="skill-column">
+        <div class="skill-column">
 
-                <div class="skill-header">
+            <div class="skill-header">
 
-                    <i class="fas fa-chart-pie"></i>
+                <i class="fas fa-chart-pie"></i>
 
-                    <h3>
-                        Data Analysis & BI
-                    </h3>
-
-                </div>
-
-                <ul class="skill-list">
-
-                    <li>
-                        Power BI
-                    </li>
-
-                    <li>
-                        DAX
-                    </li>
-
-                    <li>
-                        Excel & Power Pivot
-                    </li>
-
-                    <li>
-                        KPI Development
-                    </li>
-
-                    <li>
-                        Data Visualization & Storytelling
-                    </li>
-
-                </ul>
+                <h3>
+                    Data Analysis & BI
+                </h3>
 
             </div>
 
+            <ul class="skill-list">
 
-            <!-- COLUMN 2: SQL & PROGRAMMING -->
+                <li>
+                    Power BI
+                </li>
 
-            <div class="skill-column">
+                <li>
+                    DAX
+                </li>
 
-                <div class="skill-header">
+                <li>
+                    Excel & Power Pivot
+                </li>
 
-                    <i class="fas fa-code"></i>
+                <li>
+                    KPI Development
+                </li>
 
-                    <h3>
-                        SQL & Programming
-                    </h3>
+                <li>
+                    Data Visualization & Storytelling
+                </li>
 
-                </div>
-
-                <ul class="skill-list">
-
-                    <li>
-                        SQL Server
-                    </li>
-
-                    <li>
-                        T-SQL
-                    </li>
-
-                    <li>
-                        SQL Queries & Views
-                    </li>
-
-                    <li>
-                        Python
-                    </li>
-
-                    <li>
-                        Pandas
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- COLUMN 3: DATA PREPARATION & MODELING -->
-
-            <div class="skill-column">
-
-                <div class="skill-header">
-
-                    <i class="fas fa-database"></i>
-
-                    <h3>
-                        Data Preparation & Modeling
-                    </h3>
-
-                </div>
-
-                <ul class="skill-list">
-
-                    <li>
-                        Data Cleaning & Transformation
-                    </li>
-
-                    <li>
-                        Power Query
-                    </li>
-
-                    <li>
-                        Star Schema
-                    </li>
-
-                    <li>
-                        Dimensional Data Modeling
-                    </li>
-
-                    <li>
-                        Data Preparation for BI
-                    </li>
-
-                </ul>
-
-            </div>
-
+            </ul>
 
         </div>
 
+
+        <!-- COLUMN 2: SQL & PROGRAMMING -->
+
+        <div class="skill-column">
+
+            <div class="skill-header">
+
+                <i class="fas fa-code"></i>
+
+                <h3>
+                    SQL & Programming
+                </h3>
+
+            </div>
+
+            <ul class="skill-list">
+
+                <li>
+                    SQL Server
+                </li>
+
+                <li>
+                    T-SQL
+                </li>
+
+                <li>
+                    SQL Queries & Views
+                </li>
+
+                <li>
+                    Python
+                </li>
+
+                <li>
+                    Pandas
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- COLUMN 3: DATA PREPARATION & MODELING -->
+
+        <div class="skill-column">
+
+            <div class="skill-header">
+
+                <i class="fas fa-database"></i>
+
+                <h3>
+                    Data Preparation & Modeling
+                </h3>
+
+            </div>
+
+            <ul class="skill-list">
+
+                <li>
+                    Data Cleaning & Transformation
+                </li>
+
+                <li>
+                    Power Query
+                </li>
+
+                <li>
+                    Star Schema
+                </li>
+
+                <li>
+                    Dimensional Data Modeling
+                </li>
+
+                <li>
+                    Data Preparation for BI
+                </li>
+
+            </ul>
+
+        </div>
+
+
     </div>
 
-</section>
+</div>
 ```
 
-
+</section>
 
 <!-- ===================================
      CERTIFICATIONS
@@ -1194,118 +1207,117 @@
 
 <section id="certificates" class="section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>Courses & Certifications</h2>
+    <h2>Courses & Certifications</h2>
 
-        <div class="certifications-grid">
+    <div class="certifications-grid">
 
 
-            <!-- CERTIFICATE 1 -->
+        <!-- CERTIFICATE 1 -->
 
-            <div class="cert-card">
+        <div class="cert-card">
 
-                <div class="cert-img-container">
+            <div class="cert-img-container">
 
-                    <img
-                        src="assets/certificates/depi-cert.jpg"
-                        alt="DEPI Power BI Certification"
-                    >
-
-                </div>
-
-                <div class="cert-details">
-
-                    <h3>
-                        Data Analytics - Microsoft Power BI
-                    </h3>
-
-                    <p class="cert-issuer">
-
-                        <i class="fas fa-building-columns"></i>
-
-                        Digital Egypt Pioneers Initiative (DEPI)
-
-                    </p>
-
-                    <span class="cert-date">
-                        2024 – 2025
-                    </span>
-
-                </div>
+                <img
+                    src="assets/certificates/depi-cert.jpg"
+                    alt="DEPI Power BI Certification"
+                >
 
             </div>
 
+            <div class="cert-details">
 
-            <!-- CERTIFICATE 2 -->
+                <h3>
+                    Data Analytics - Microsoft Power BI
+                </h3>
 
-            <div class="cert-card">
+                <p class="cert-issuer">
 
-                <div class="cert-img-container">
+                    <i class="fas fa-building-columns"></i>
 
-                    <img
-                        src="assets/certificates/nti-cert.jpg"
-                        alt="NTI Data Analysis Certification"
-                    >
+                    Digital Egypt Pioneers Initiative (DEPI)
 
-                </div>
+                </p>
 
-                <div class="cert-details">
-
-                    <h3>
-                        Data Analysis Training Program
-                    </h3>
-
-                    <p class="cert-issuer">
-
-                        <i class="fas fa-building-columns"></i>
-
-                        National Telecommunication Institute (NTI)
-                        & Creativa
-
-                    </p>
-
-                    <span class="cert-date">
-                        March 2026
-                    </span>
-
-                </div>
+                <span class="cert-date">
+                    2024 – 2025
+                </span>
 
             </div>
 
+        </div>
 
-            <!-- CERTIFICATE 3 -->
 
-            <div class="cert-card">
+        <!-- CERTIFICATE 2 -->
 
-                <div class="cert-img-container">
+        <div class="cert-card">
 
-                    <img
-                        src="assets/certificates/huawei-cert.jpg"
-                        alt="Huawei HCIA-AI Certification"
-                    >
+            <div class="cert-img-container">
 
-                </div>
+                <img
+                    src="assets/certificates/nti-cert.jpg"
+                    alt="NTI Data Analysis Certification"
+                >
 
-                <div class="cert-details">
+            </div>
 
-                    <h3>
-                        HCIA-AI V4.0 Course Certificate
-                    </h3>
+            <div class="cert-details">
 
-                    <p class="cert-issuer">
+                <h3>
+                    Data Analysis Training Program
+                </h3>
 
-                        <i class="fas fa-building-columns"></i>
+                <p class="cert-issuer">
 
-                        Huawei ICT Academy
+                    <i class="fas fa-building-columns"></i>
 
-                    </p>
+                    National Telecommunication Institute (NTI)
+                    & Creativa
 
-                    <span class="cert-date">
-                        November 2025
-                    </span>
+                </p>
 
-                </div>
+                <span class="cert-date">
+                    March 2026
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- CERTIFICATE 3 -->
+
+        <div class="cert-card">
+
+            <div class="cert-img-container">
+
+                <img
+                    src="assets/certificates/huawei-cert.jpg"
+                    alt="Huawei HCIA-AI Certification"
+                >
+
+            </div>
+
+            <div class="cert-details">
+
+                <h3>
+                    HCIA-AI V4.0 Course Certificate
+                </h3>
+
+                <p class="cert-issuer">
+
+                    <i class="fas fa-building-columns"></i>
+
+                    Huawei ICT Academy
+
+                </p>
+
+                <span class="cert-date">
+                    November 2025
+                </span>
 
             </div>
 
@@ -1313,8 +1325,10 @@
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- ===================================
      CONTACT
@@ -1322,115 +1336,116 @@
 
 <section id="contact" class="section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>Send me a message</h2>
+    <h2>Send me a message</h2>
 
-        <form
-            action="https://formsubmit.co/ahmed.rasmy.abdelrheem@gmail.com"
-            method="POST"
-            class="contact-form"
+    <form
+        action="https://formsubmit.co/ahmed.rasmy.abdelrheem@gmail.com"
+        method="POST"
+        class="contact-form"
+    >
+
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Portfolio Inquiry!"
         >
 
-            <input
-                type="hidden"
-                name="_subject"
-                value="New Portfolio Inquiry!"
-            >
+        <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+        >
+
+        <p>
+            Interested in collaborating or discussing full-time
+            opportunities? Feel free to reach out!
+        </p>
+
+
+        <div class="form-group">
+
+            <label for="name">
+                Name
+            </label>
 
             <input
-                type="hidden"
-                name="_captcha"
-                value="false"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name"
+                required
             >
 
-            <p>
-                Interested in collaborating or discussing full-time
-                opportunities? Feel free to reach out!
-            </p>
+        </div>
 
 
-            <div class="form-group">
+        <div class="form-group">
 
-                <label for="name">
-                    Name
-                </label>
+            <label for="email">
+                Email
+            </label>
 
-                <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Your name"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="email">
-                    Email
-                </label>
-
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Your email"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="subject">
-                    Subject
-                </label>
-
-                <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="message">
-                    Message
-                </label>
-
-                <textarea
-                    name="message"
-                    id="message"
-                    rows="5"
-                    placeholder="Your message"
-                    required
-                ></textarea>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="btn"
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email"
+                required
             >
-                Send Message
-            </button>
 
-        </form>
+        </div>
 
-    </div>
+
+        <div class="form-group">
+
+            <label for="subject">
+                Subject
+            </label>
+
+            <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                name="message"
+                id="message"
+                rows="5"
+                placeholder="Your message"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="btn"
+        >
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+```
 
 </section>
-
 
 <!-- ===================================
      FOOTER
@@ -1438,17 +1453,17 @@
 
 <footer>
 
-    <div class="container">
+```
+<div class="container">
 
-        <p>
-            &copy; 2026 Ahmed Rasmy. All rights reserved.
-        </p>
+    <p>
+        &copy; 2026 Ahmed Rasmy. All rights reserved.
+    </p>
 
-    </div>
+</div>
+```
 
 </footer>
 
-
 </body>
 </html>
-```
