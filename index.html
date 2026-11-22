@@ -478,6 +478,18 @@
             box-shadow: var(--shadow-elevated), var(--shadow-glow);
         }
 
+        #sales-project:target {
+            border-color: var(--primary);
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.45);
+            animation: highlightPulse 2s ease-out;
+        }
+
+        @keyframes highlightPulse {
+            0% { box-shadow: 0 0 50px rgba(56, 189, 248, 0.7); transform: scale(1.01); }
+            50% { box-shadow: 0 0 30px rgba(56, 189, 248, 0.3); transform: scale(1); }
+            100% { box-shadow: 0 0 35px rgba(56, 189, 248, 0.45); transform: scale(1); }
+        }
+
         .project-card.featured-project {
             border: 1px solid rgba(56, 189, 248, 0.3);
             position: relative;
@@ -1388,7 +1400,7 @@
                 </div>
 
                 <!-- PROJECT 3: SALES PERFORMANCE DASHBOARD -->
-                <div class="project-card">
+                <div id="sales-project" class="project-card" style="scroll-margin-top: 100px;">
                     <div class="project-img-wrapper" onclick="openLightbox('assets/images/project-sales.png', 'Sales & Revenue Performance Dashboard')">
                         <img src="assets/images/project-sales.png" alt="Sales Performance Dashboard">
                         <div class="project-img-overlay">
@@ -1419,11 +1431,14 @@
                         </p>
 
                         <div class="project-buttons">
-                            <a href="https://github.com/ahmedrasmyabdelrheem/sales-performance-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                                <i class="fab fa-github"></i> GitHub
+                            <a href="assets/Sales_Orders_Dataset.csv" download="Sales_Orders_Dataset.csv" class="btn btn-secondary" title="Download raw orders dataset (.csv)">
+                                <i class="fas fa-file-csv"></i> Download (.csv)
                             </a>
-                            <a href="assets/Sales_Performance_Dashboard.xlsx" download="Sales_Performance_Dashboard.xlsx" class="btn btn-primary">
+                            <a href="assets/Sales_Performance_Dashboard.xlsx" download="Sales_Performance_Dashboard.xlsx" class="btn btn-primary" title="Download full Excel model (.xlsx)">
                                 <i class="fas fa-file-excel"></i> Download (.xlsx)
+                            </a>
+                            <a href="https://github.com/ahmedrasmyabdelrheem/sales-performance-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="View GitHub repository">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
