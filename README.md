@@ -39,7 +39,7 @@ I am a **Data & Business Intelligence Analyst** focused on engineering actionabl
 
 - **Business Intelligence & Visualization:** Power BI Desktop, Power BI Service, DAX, KPI Dashboards, Data Storytelling
 - **Data Modeling & ETL:** Star Schema, Dimensional Modeling, Power Query (ETL/Append), Power Pivot
-- **Database & Scripting:** SQL Server (SSMS), T-SQL (Window Functions, Views, Joins), Python (Pandas)
+- **Database & Querying:** SQL Server (SSMS), T-SQL (Window Functions, Views, Joins)
 - **Workflow Automation & Tools:** Power Automate (Cloud Flows), Scheduled Refresh, Microsoft Excel, Google Sheets & Forms
 
 ---

@@ -3,1761 +3,781 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Ahmed Rasmy | Data & Business Intelligence Analyst</title>
+    <title>Ahmed Rasmy | Data Analyst | Business Intelligence</title>
+    <meta name="description" content="Personal data analytics and business intelligence portfolio website showcasing projects, dashboards, skills, and certifications.">
+    <meta property="og:title" content="Ahmed Rasmy | Data Analyst | Business Intelligence">
+    <meta property="og:description" content="Personal data analytics and business intelligence portfolio website showcasing projects, dashboards, skills, and certifications.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-32x32.png">
     <link rel="apple-touch-icon" href="favicon-32x32.png">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Fraunces (Display) + Manrope (Body) + JetBrains Mono (Indices/Tools) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome Icons (Interactive Affordances Only) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        /* ===================================
-           1. MODERN COLOR SYSTEM & VARIABLES
-        =================================== */
-        :root {
-            --bg-body: #070b14;
-            --bg-header: #0b1120;
-            --bg-card: #0f172a;
-            --bg-card-hover: #152238;
-            --bg-card-glass: rgba(15, 23, 42, 0.75);
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(56, 189, 248, 0.4);
-            
-            --primary: #38bdf8;
-            --primary-rgb: 56, 189, 248;
-            --primary-glow: rgba(56, 189, 248, 0.18);
-            --primary-dark: #0284c7;
-            
-            --accent-indigo: #6366f1;
-            --accent-purple: #a855f7;
-            --accent-emerald: #10b981;
-            --accent-rose: #f43f5e;
-            --accent-amber: #f59e0b;
-            
-            --text-main: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
-            
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 18px;
-            --radius-xl: 24px;
-            
-            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
-            --shadow-elevated: 0 14px 40px -10px rgba(0, 0, 0, 0.6);
-            --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.18);
-            
-            --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--text-secondary);
-            background-color: var(--bg-body);
-            line-height: 1.65;
-            overflow-x: hidden;
-            width: 100%;
-            background-image: 
-                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.12), transparent 70%),
-                radial-gradient(ellipse 60% 40% at 90% 40%, rgba(99, 102, 241, 0.07), transparent 60%);
-            background-attachment: fixed;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section {
-            padding: 90px 0;
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 680px;
-            margin: 0 auto 50px auto;
-        }
-
-        .section-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            background: var(--primary-glow);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            border-radius: 999px;
-            color: var(--primary);
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 14px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(1.8rem, 3.8vw, 2.5rem);
-            color: var(--text-main);
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-
-        /* ===================================
-           2. HEADER & HERO SECTION
-        =================================== */
-        header {
-            background: linear-gradient(180deg, #090e1a 0%, #060911 100%);
-            padding: 85px 0 60px 0;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 16px;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 999px;
-            color: #34d399;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 22px;
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background: #10b981;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #10b981;
-            animation: pulseGlow 2s infinite;
-        }
-
-        @keyframes pulseGlow {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.3); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
-        }
-
-        header h1 {
-            font-size: clamp(2.5rem, 5.5vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -1px;
-            line-height: 1.15;
-            color: var(--text-main);
-            margin-bottom: 14px;
-        }
-
-        header h1 .gradient-text {
-            background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-            color: var(--primary);
-            font-weight: 600;
-            max-width: 720px;
-            margin: 0 auto 28px auto;
-        }
-
-        .hero-summary {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 660px;
-            margin: 0 auto 35px auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 35px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 12px 24px;
-            border-radius: var(--radius-sm);
-            font-size: 0.96rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            border: 1px solid transparent;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
-            color: #040914;
-            font-weight: 700;
-            box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
-            background: linear-gradient(135deg, #0369a1 0%, #38bdf8 100%);
-            color: #000;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            background: rgba(255, 255, 255, 0.04);
-            color: var(--text-secondary);
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.15rem;
-            transition: var(--transition-smooth);
-            border: 1px solid var(--border-color);
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            color: #05080e;
-            transform: translateY(-3px) scale(1.05);
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.45);
-        }
-
-        /* ===================================
-           3. NAVIGATION
-        =================================== */
-        nav {
-            background: rgba(8, 12, 22, 0.88);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            padding: 4px 0;
-        }
-
-        .nav-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-brand {
-            font-weight: 800;
-            font-size: 1.15rem;
-            color: var(--text-main);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .nav-brand span {
-            color: var(--primary);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            gap: 6px;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 6px 0;
-        }
-
-        nav ul::-webkit-scrollbar {
-            display: none;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 8px 16px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
-            border-radius: var(--radius-sm);
-            transition: var(--transition-smooth);
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--primary);
-            background: rgba(56, 189, 248, 0.08);
-        }
-
-        /* ===================================
-           4. ABOUT ME
-        =================================== */
-        .about-card {
-            background: var(--bg-card-glass);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-xl);
-            padding: 45px;
-            box-shadow: var(--shadow-subtle);
-            backdrop-filter: blur(12px);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 45px;
-            align-items: center;
-        }
-
-        .about-photo-wrapper {
-            text-align: center;
-        }
-
-        .profile-photo {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: var(--radius-xl);
-            border: 2px solid rgba(56, 189, 248, 0.35);
-            box-shadow: 0 0 35px rgba(56, 189, 248, 0.2);
-            transition: var(--transition-smooth);
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.02);
-            border-color: var(--primary);
-            box-shadow: 0 0 45px rgba(56, 189, 248, 0.35);
-        }
-
-        .about-text h3 {
-            font-size: 1.6rem;
-            color: var(--text-main);
-            margin-bottom: 14px;
-            font-weight: 700;
-        }
-
-        .about-text p {
-            margin-bottom: 16px;
-            font-size: 1.02rem;
-            line-height: 1.7;
-            color: var(--text-secondary);
-        }
-
-        .about-text strong {
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 14px;
-            margin-top: 25px;
-        }
-
-        .highlight-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .highlight-item i {
-            font-size: 1.3rem;
-            color: var(--primary);
-        }
-
-        .highlight-item div h4 {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .highlight-item div p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        /* ===================================
-           5. FEATURED PROJECTS
-        =================================== */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
-        }
-
-        .project-card {
-            background: var(--bg-card-glass);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-            backdrop-filter: blur(12px);
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition-smooth);
-            position: relative;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-elevated), var(--shadow-glow);
-        }
-
-        #sales-project:target {
-            border-color: var(--primary);
-            box-shadow: 0 0 35px rgba(56, 189, 248, 0.45);
-            animation: highlightPulse 2s ease-out;
-        }
-
-        @keyframes highlightPulse {
-            0% { box-shadow: 0 0 50px rgba(56, 189, 248, 0.7); transform: scale(1.01); }
-            50% { box-shadow: 0 0 30px rgba(56, 189, 248, 0.3); transform: scale(1); }
-            100% { box-shadow: 0 0 35px rgba(56, 189, 248, 0.45); transform: scale(1); }
-        }
-
-        .project-card.featured-project {
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            position: relative;
-        }
-
-        .featured-ribbon {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
-            color: #040914;
-            font-size: 0.72rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            z-index: 2;
-            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
-        }
-
-        .project-img-wrapper {
-            position: relative;
-            width: 100%;
-            height: 220px;
-            background: #090e1a;
-            overflow: hidden;
-            cursor: pointer;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .project-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .project-card:hover .project-img-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .project-img-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(9, 14, 26, 0.65);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.9rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            backdrop-filter: blur(3px);
-        }
-
-        .project-img-wrapper:hover .project-img-overlay {
-            opacity: 1;
-        }
-
-        .project-body {
-            padding: 26px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .project-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 16px;
-        }
-
-        .project-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-sm);
-            background: var(--primary-glow);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .project-card h3 {
-            font-size: 1.25rem;
-            color: var(--text-main);
-            font-weight: 700;
-            line-height: 1.35;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-            margin-bottom: 18px;
-        }
-
-        .tech-tag {
-            font-size: 0.76rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            transition: var(--transition-smooth);
-        }
-
-        .project-card:hover .tech-tag {
-            border-color: rgba(56, 189, 248, 0.2);
-        }
-
-        .tech-tag.primary-tag {
-            background: rgba(56, 189, 248, 0.12);
-            color: var(--primary);
-            border-color: rgba(56, 189, 248, 0.3);
-        }
-
-        /* KPI Micro Grid inside Cards */
-        .kpi-micro-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 12px 14px;
-            margin-bottom: 18px;
-        }
-
-        .kpi-pill {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .kpi-pill .kpi-label {
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-        }
-
-        .kpi-pill .kpi-val {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--text-main);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .kpi-pill.accent-primary .kpi-val { color: var(--primary); }
-        .kpi-pill.accent-rose .kpi-val { color: var(--accent-rose); }
-        .kpi-pill.accent-emerald .kpi-val { color: var(--accent-emerald); }
-        .kpi-pill.accent-amber .kpi-val { color: var(--accent-amber); }
-
-        .project-desc {
-            font-size: 0.94rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-            margin-bottom: 22px;
-            flex-grow: 1;
-        }
-
-        .project-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: auto;
-        }
-
-        .project-buttons .btn {
-            flex: 1;
-            min-width: 140px;
-            padding: 10px 14px;
-            font-size: 0.88rem;
-        }
-
-        /* ===================================
-           6. TECHNICAL SKILLS
-        =================================== */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-
-        .skill-card {
-            background: var(--bg-card-glass);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            box-shadow: var(--shadow-subtle);
-            backdrop-filter: blur(12px);
-            transition: var(--transition-smooth);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-elevated);
-        }
-
-        .skill-card-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 22px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .skill-card-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: var(--radius-md);
-            background: var(--primary-glow);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.4rem;
-        }
-
-        .skill-card-header h3 {
-            font-size: 1.15rem;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .skill-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 11px;
-        }
-
-        .skill-list li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.94rem;
-            color: var(--text-secondary);
-        }
-
-        .skill-list li i {
-            color: var(--primary);
-            font-size: 0.85rem;
-        }
-
-        /* ===================================
-           7. COURSES & CERTIFICATIONS (HIGH CLARITY)
-        =================================== */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 28px;
-        }
-
-        .cert-card {
-            background: var(--bg-card-glass);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-            backdrop-filter: blur(12px);
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition-smooth);
-            position: relative;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-elevated), var(--shadow-glow);
-        }
-
-        /* Clear, uncropped certificate showcase */
-        .cert-preview-frame {
-            position: relative;
-            width: 100%;
-            height: 240px;
-            background: #060a12;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            border-bottom: 1px solid var(--border-color);
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .cert-preview-frame img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .cert-card:hover .cert-preview-frame img {
-            transform: scale(1.03);
-        }
-
-        .cert-zoom-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(6, 10, 18, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: #ffffff;
-            font-size: 0.92rem;
-            font-weight: 600;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            backdrop-filter: blur(4px);
-        }
-
-        .cert-preview-frame:hover .cert-zoom-overlay {
-            opacity: 1;
-        }
-
-        .cert-zoom-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(56, 189, 248, 0.2);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 999px;
-            font-size: 0.88rem;
-            font-weight: 700;
-        }
-
-        .cert-details {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .cert-details h3 {
-            font-size: 1.15rem;
-            color: var(--text-main);
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        .cert-issuer {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .cert-issuer i {
-            color: var(--primary);
-        }
-
-        .cert-footer-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: auto;
-            padding-top: 14px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .cert-date {
-            font-size: 0.82rem;
-            color: var(--primary);
-            background: var(--primary-glow);
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-weight: 600;
-            border: 1px solid rgba(56, 189, 248, 0.25);
-        }
-
-        .cert-view-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: var(--transition-smooth);
-            cursor: pointer;
-            background: transparent;
-            border: none;
-        }
-
-        .cert-view-btn:hover {
-            color: var(--primary);
-        }
-
-        /* ===================================
-           8. LIGHTBOX MODAL (CERTIFICATES & DASHBOARDS)
-        =================================== */
-        .lightbox-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(4, 7, 15, 0.92);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .lightbox-modal.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .lightbox-content {
-            background: #0b1120;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            max-width: 90vw;
-            max-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
-            transform: scale(0.95);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .lightbox-modal.active .lightbox-content {
-            transform: scale(1);
-        }
-
-        .lightbox-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 22px;
-            background: #0f172a;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .lightbox-title {
-            color: var(--text-main);
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .lightbox-close {
-            background: rgba(255, 255, 255, 0.08);
-            border: none;
-            color: var(--text-main);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: var(--transition-smooth);
-        }
-
-        .lightbox-close:hover {
-            background: var(--accent-rose);
-            color: #fff;
-        }
-
-        .lightbox-body {
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #060911;
-            overflow: auto;
-            max-height: calc(90vh - 120px);
-        }
-
-        .lightbox-body img {
-            max-width: 100%;
-            max-height: 75vh;
-            object-fit: contain;
-            border-radius: 6px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
-        }
-
-        .lightbox-footer {
-            padding: 12px 22px;
-            background: #0f172a;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 0.88rem;
-            color: var(--text-muted);
-        }
-
-        /* ===================================
-           9. CONTACT & FOOTER
-        =================================== */
-        .contact-container {
-            max-width: 720px;
-            margin: 0 auto;
-            background: var(--bg-card-glass);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-xl);
-            padding: 40px;
-            box-shadow: var(--shadow-subtle);
-            backdrop-filter: blur(12px);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .form-group label {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            font-family: inherit;
-            font-size: 0.95rem;
-            background: #090e1a;
-            color: #ffffff;
-            transition: var(--transition-smooth);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-            background: #0d1526;
-        }
-
-        .contact-form button[type="submit"] {
-            width: 100%;
-            padding: 14px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 8px;
-        }
-
-        footer {
-            background: #05080e;
-            color: var(--text-muted);
-            padding: 35px 0;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        /* ===================================
-           10. RESPONSIVE MEDIA QUERIES
-        =================================== */
-        @media (max-width: 900px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 30px;
-            }
-
-            .about-photo-wrapper {
-                margin: 0 auto;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
-            }
-
-            .about-card,
-            .contact-container {
-                padding: 26px 20px;
-            }
-
-            .projects-grid,
-            .certifications-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-buttons {
-                flex-direction: column;
-            }
-
-            .nav-brand {
-                display: none;
-            }
-        }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- ===================================
-         HEADER / HERO SECTION
+         NAVIGATION BAR
     =================================== -->
-    <header>
-        <div class="container" style="text-align: center;">
-            <div class="hero-badge">
-                <span class="pulse-dot"></span>
-                Available for BI & Data Analytics Roles
-            </div>
+    <nav class="site-nav" aria-label="Primary Navigation">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand">Ahmed Rasmy</a>
 
-            <h1>
-                <span class="gradient-text">Ahmed Rasmy</span>
-            </h1>
-
-            <p class="hero-subtitle">
-                Data & Business Intelligence Analyst | SQL Server • Power BI • DAX • Advanced Excel Modeling
-            </p>
-
-            <p class="hero-summary">
-                Transforming complex operational and business datasets into clear KPIs, interactive dashboards, and actionable strategic insights.
-            </p>
-
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-chart-column"></i>
-                    Explore Projects
-                </a>
-                <a href="assets/Ahmed_Rasmy_CV.pdf" download="Ahmed_Rasmy_CV.pdf" class="btn btn-secondary">
-                    <i class="fas fa-file-arrow-down"></i>
-                    Download CV
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-paper-plane"></i>
-                    Contact Me
-                </a>
-            </div>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ahmedrasmyabdelrheem" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/ahmedrasmyabdelrheem" target="_blank" rel="noopener noreferrer" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:ahmed.rasmy.abdelrheem@gmail.com" title="Email Me">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="assets/Ahmed_Rasmy_CV.pdf" download title="Download CV (PDF)">
-                    <i class="fas fa-file-pdf"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- ===================================
-         NAVIGATION
-    =================================== -->
-    <nav>
-        <div class="container nav-wrapper">
-            <a href="#" class="nav-brand">
-                Ahmed<span>Rasmy</span>.
-            </a>
-
-            <ul>
+            <ul id="navLinks" class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#certificates">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="#contact" class="btn btn-primary" style="padding: 7px 16px; font-size: 0.85rem; display: none;">
-                Get in Touch
-            </a>
+            <div class="nav-actions">
+                <a href="assets/Ahmed_Rasmy_CV.pdf" download="Ahmed_Rasmy_CV.pdf" class="nav-cta">
+                    <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                    Download CV
+                </a>
+                <button
+                    id="navToggle"
+                    type="button"
+                    class="nav-toggle"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                >
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- ===================================
-         ABOUT ME SECTION
+         HERO SECTION (#0B1020)
     =================================== -->
-    <section id="about" class="section">
+    <header class="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+            <svg class="hero-motif-svg" viewBox="0 0 600 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="splineStroke" x1="40" y1="380" x2="560" y2="80" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#8FA5FF" stop-opacity="0" />
+                        <stop offset="50%" stop-color="#8FA5FF" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#8FA5FF" stop-opacity="0.08" />
+                    </linearGradient>
+                    <linearGradient id="splineArea" x1="300" y1="90" x2="300" y2="410" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#8FA5FF" stop-opacity="0.09" />
+                        <stop offset="100%" stop-color="#0B1020" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+
+                <g stroke="#AAB4CF" stroke-opacity="0.07" stroke-width="1">
+                    <line x1="140" y1="36" x2="140" y2="424" stroke-dasharray="2 6" />
+                    <line x1="300" y1="36" x2="300" y2="424" stroke-dasharray="2 6" />
+                    <line x1="460" y1="36" x2="460" y2="424" stroke-dasharray="2 6" />
+                    <line x1="60" y1="140" x2="560" y2="140" />
+                    <line x1="60" y1="260" x2="560" y2="260" />
+                    <line x1="60" y1="380" x2="560" y2="380" />
+                </g>
+
+                <path
+                    d="M40 374 C140 356, 210 290, 300 256 C380 226, 430 172, 540 112 L540 400 L40 400 Z"
+                    fill="url(#splineArea)"
+                />
+                <path
+                    d="M40 374 C140 356, 210 290, 300 256 C380 226, 430 172, 540 112"
+                    stroke="url(#splineStroke)"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                />
+                <circle cx="300" cy="256" r="3" fill="#0B1020" stroke="#8FA5FF" stroke-opacity="0.55" stroke-width="1.5" />
+                <circle cx="460" cy="154" r="3.5" fill="#8FA5FF" fill-opacity="0.7" />
+            </svg>
+        </div>
+
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-user"></i> Profile</span>
-                <h2>About Me</h2>
-                <p>Bridging the gap between business understanding and technical data architecture.</p>
-            </div>
+            <div class="hero-inner">
+                <p class="hero-kicker">Available for Data Analyst &amp; BI Roles</p>
 
-            <div class="about-card">
-                <div class="about-grid">
-                    <div class="about-photo-wrapper">
-                        <img src="assets/images/profile-photo.jpg" alt="Ahmed Rasmy" class="profile-photo">
-                    </div>
+                <h1>Ahmed Rasmy</h1>
 
-                    <div class="about-text">
-                        <h3>Turning raw data into high-impact business decisions.</h3>
-                        <p>
-                            I am a <strong>Data & Business Intelligence Analyst</strong> holding a degree in <strong>Management Information Systems (MIS)</strong>, complemented by intensive professional training from the <strong>Digital Egypt Pioneers Initiative (DEPI)</strong> and the <strong>National Telecommunication Institute (NTI)</strong>.
-                        </p>
-                        <p>
-                            My analytical toolkit centers around <strong>relational data modeling (Star Schema)</strong>, formulating complex <strong>DAX measures</strong>, engineering optimized <strong>SQL queries & views</strong>, and building intuitive, executive-ready <strong>Power BI & Excel dashboards</strong>.
-                        </p>
-                        <p>
-                            I specialize in diagnosing operational bottlenecks, customer behavior segmentation, workforce retention & attrition patterns, and sales performance dynamics.
-                        </p>
+                <p class="hero-role">
+                    Data Analyst | Business Intelligence
+                </p>
 
-                        <div class="highlights-grid">
-                            <div class="highlight-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <div>
-                                    <h4>MIS Degree</h4>
-                                    <p>Management Info Systems</p>
-                                </div>
-                            </div>
+                <p class="hero-summary">
+                    I analyze customer behavior, marketing performance, and operational data to build clear dashboards that support practical business decisions.
+                </p>
 
-                            <div class="highlight-item">
-                                <i class="fas fa-certificate"></i>
-                                <div>
-                                    <h4>DEPI & NTI Alum</h4>
-                                    <p>Gov-backed BI Training</p>
-                                </div>
-                            </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                    </a>
+                    <a href="assets/Ahmed_Rasmy_CV.pdf" download="Ahmed_Rasmy_CV.pdf" class="btn btn-secondary">
+                        <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                        Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
 
-                            <div class="highlight-item">
-                                <i class="fas fa-chart-line"></i>
-                                <div>
-                                    <h4>KPI Architecture</h4>
-                                    <p>DAX & Business Metrics</p>
-                                </div>
-                            </div>
-
-                            <div class="highlight-item">
-                                <i class="fas fa-database"></i>
-                                <div>
-                                    <h4>Relational Modeling</h4>
-                                    <p>Star Schema & Power Pivot</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hero-social" aria-label="Direct Links">
+                    <a href="https://www.linkedin.com/in/ahmedrasmyabdelrheem" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/ahmedrasmyabdelrheem" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                    <a href="mailto:ahmed.rasmy.abdelrheem@gmail.com" title="Email Me">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        Email
+                    </a>
+                    <a href="assets/Ahmed_Rasmy_CV.pdf" download title="Download CV (PDF)">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        CV (PDF)
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- ===================================
-         FEATURED PROJECTS SECTION
-    =================================== -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-briefcase"></i> Portfolio</span>
-                <h2>Featured Projects</h2>
-                <p>End-to-end analytical solutions featuring SQL pipelines, DAX modeling, and executive BI dashboards.</p>
-            </div>
+    <main id="main-content">
 
-            <div class="projects-grid">
-
-                <!-- PROJECT 1: RFM CUSTOMER SEGMENTATION -->
-                <div class="project-card">
-                    <div class="project-img-wrapper" onclick="openLightbox('assets/images/project-rfm.png', 'Customer Behavioral Segmentation & RFM Analysis Dashboard')">
-                        <img src="assets/images/project-rfm.png" alt="RFM Customer Segmentation Dashboard">
-                        <div class="project-img-overlay">
-                            <i class="fas fa-expand"></i> Click to Enlarge Dashboard
+        <!-- ===================================
+             ABOUT SECTION (#111A2E)
+        =================================== -->
+        <section id="about" class="section section-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">
+                            <span>01</span>
+                            <span class="section-kicker-sep" aria-hidden="true">·</span>
+                            <span>About</span>
                         </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-users-gear"></i>
-                            </div>
-                            <div>
-                                <h3>Customer Behavioral Segmentation & RFM Analysis</h3>
-                            </div>
-                        </div>
-
-                        <div class="project-tags">
-                            <span class="tech-tag primary-tag">SQL Server</span>
-                            <span class="tech-tag primary-tag">T-SQL</span>
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">DAX</span>
-                            <span class="tech-tag">RFM Modeling</span>
-                        </div>
-
-                        <p class="project-desc">
-                            Analyzed 12 months of transactional data using T-SQL and implemented the RFM (Recency, Frequency, Monetary) statistical framework to evaluate customer purchasing behavior. Segmented 287 customers into behavioral tiers (Champions, Loyal, At Risk, Hibernating) to guide retention strategies.
-                        </p>
-
-                        <div class="project-buttons">
-                            <a href="https://github.com/ahmedrasmyabdelrheem/rfm-customer-segmentation" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiOTNmNDQ0OTItM2YxMC00MTdhLWE0MGUtZmFmMGJjMDhlM2MzIiwidCI6ImVhZjYyNGM4LWEwYzQtNDE5NS04N2QyLTQ0M2U1ZDc1MTZjZCIsImMiOjh9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                <i class="fas fa-arrow-up-right-from-square"></i> Live Power BI
-                            </a>
-                        </div>
+                        <h2>About Me</h2>
                     </div>
                 </div>
 
-                <!-- PROJECT 2: PEOPLE ANALYTICS & ATTRITION INTELLIGENCE (NEW PROJECT) -->
-                <div class="project-card featured-project">
-                    <div class="featured-ribbon">New Analysis</div>
-
-                    <div class="project-img-wrapper" onclick="openLightbox('assets/images/project-attrition.png', 'People Analytics · Employee Attrition & Retention Intelligence Dashboard')">
-                        <img src="assets/images/project-attrition.png" alt="People Analytics Attrition Dashboard">
-                        <div class="project-img-overlay">
-                            <i class="fas fa-expand"></i> Click to Enlarge Dashboard
-                        </div>
+                <div class="about-layout">
+                    <div class="profile-frame">
+                        <img
+                            src="assets/images/profile-photo.jpg"
+                            alt="Ahmed Rasmy"
+                            class="profile-photo"
+                            loading="lazy"
+                            decoding="async"
+                            referrerPolicy="no-referrer"
+                        >
                     </div>
 
-                    <div class="project-body">
-                        <div class="project-header">
-                            <div class="project-icon" style="background: rgba(244, 63, 94, 0.15); border-color: rgba(244, 63, 94, 0.3); color: #f43f5e;">
-                                <i class="fas fa-users-slash"></i>
-                            </div>
-                            <div>
-                                <h3>People Analytics · Attrition Intelligence</h3>
-                            </div>
+                    <div class="about-content">
+                        <h3>Turning business data into clear decisions.</h3>
+
+                        <div class="about-prose">
+                            <p>
+                                I am a Data Analyst with a degree in <strong>Management Information Systems (MIS)</strong> and applied training from the <strong>Digital Egypt Pioneers Initiative (DEPI)</strong> and the <strong>National Telecommunication Institute (NTI)</strong>.
+                            </p>
                         </div>
 
-                        <div class="project-tags">
-                            <span class="tech-tag primary-tag">Microsoft Excel</span>
-                            <span class="tech-tag primary-tag">Power Pivot</span>
-                            <span class="tech-tag">DAX Measures</span>
-                            <span class="tech-tag">People Analytics</span>
-                            <span class="tech-tag">HR Metrics</span>
-                        </div>
-
-                        <!-- Real KPIs from user project data -->
-                        <div class="kpi-micro-grid">
-                            <div class="kpi-pill accent-primary">
-                                <span class="kpi-label">Active Workforce</span>
-                                <span class="kpi-val">1,119</span>
+                        <div class="focus-strip">
+                            <div class="focus-item">
+                                <h4>Customer Behavior</h4>
+                                <p>Segmentation and retention analysis</p>
                             </div>
-                            <div class="kpi-pill accent-rose">
-                                <span class="kpi-label">2026 Departures</span>
-                                <span class="kpi-val">222</span>
+                            <div class="focus-item">
+                                <h4>Marketing Performance</h4>
+                                <p>Campaign and funnel evaluation</p>
                             </div>
-                            <div class="kpi-pill accent-amber">
-                                <span class="kpi-label">YTD Attrition Rate</span>
-                                <span class="kpi-val">19.4%</span>
+                            <div class="focus-item">
+                                <h4>Customer Feedback</h4>
+                                <p>Identifying recurring friction points</p>
                             </div>
-                            <div class="kpi-pill accent-emerald">
-                                <span class="kpi-label">Avg Active Tenure</span>
-                                <span class="kpi-val">3.1 Yrs</span>
+                            <div class="focus-item">
+                                <h4>Decision Support</h4>
+                                <p>Clear reporting and BI dashboards</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <p class="project-desc">
-                            Designed an executive HR analytics solution to diagnose employee attrition drivers across 1,600 workforce records. Built robust DAX measures in Power Pivot (dynamic Opening & Average Headcount, YTD Turnover Rate). Revealed that senior talent (+5 yrs) represents 47% of exits (105 departures), with Sales (62) and Operations (47) as top hotspots.
-                        </p>
+        <!-- ===================================
+             SKILLS SECTION (#0B1020)
+        =================================== -->
+        <section id="skills" class="section section-primary section-compact">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">
+                            <span>02</span>
+                            <span class="section-kicker-sep" aria-hidden="true">·</span>
+                            <span>Skills</span>
+                        </div>
+                        <h2>Core Skills</h2>
+                    </div>
+                </div>
 
-                        <div class="project-buttons">
-                            <button onclick="openLightbox('assets/images/project-attrition.png', 'People Analytics · Employee Attrition & Retention Intelligence Dashboard')" class="btn btn-secondary">
-                                <i class="fas fa-image"></i> View Dashboard
+                <ul class="skills-strip" aria-label="Core technical skills">
+                    <li>
+                        <span class="skill-num" aria-hidden="true">01</span>
+                        <span class="skill-name">SQL</span>
+                    </li>
+                    <li>
+                        <span class="skill-num" aria-hidden="true">02</span>
+                        <span class="skill-name">Power BI</span>
+                    </li>
+                    <li>
+                        <span class="skill-num" aria-hidden="true">03</span>
+                        <span class="skill-name">DAX</span>
+                    </li>
+                    <li>
+                        <span class="skill-num" aria-hidden="true">04</span>
+                        <span class="skill-name">Microsoft Excel</span>
+                    </li>
+                    <li>
+                        <span class="skill-num" aria-hidden="true">05</span>
+                        <span class="skill-name">Power Query</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================================
+             PROJECTS SECTION (#111A2E)
+             Vertical Full-Width Case Studies
+        =================================== -->
+        <section id="projects" class="section section-secondary">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">
+                            <span>03</span>
+                            <span class="section-kicker-sep" aria-hidden="true">·</span>
+                            <span>Projects</span>
+                        </div>
+                        <h2>Selected Case Studies</h2>
+                    </div>
+                    <p class="section-lead">
+                        Full dashboard views with business objectives and decision-making value. Click any dashboard to inspect full size.
+                    </p>
+                </div>
+
+                <div class="case-studies-list">
+
+                    <!-- CASE STUDY 01: RFM CUSTOMER SEGMENTATION -->
+                    <article class="case-study">
+                        <div class="case-study-head">
+                            <p class="case-study-index">Case Study 01</p>
+                            <h3>Customer Behavioral Segmentation &amp; RFM Analysis</h3>
+                            <p class="case-study-objective">
+                                Classifies customers by recency, purchase frequency, and spending behavior to show how different customer groups engage with the business.
+                            </p>
+                        </div>
+
+                        <div class="case-study-media-wrap">
+                            <button
+                                type="button"
+                                class="case-study-media-btn"
+                                data-lightbox-src="assets/images/project-rfm.png"
+                                data-lightbox-title="Customer Behavioral Segmentation &amp; RFM Analysis Dashboard"
+                                aria-label="Enlarge Customer Behavioral Segmentation and RFM Analysis Dashboard"
+                            >
+                                <img
+                                    src="assets/images/project-rfm.png"
+                                    alt="RFM Customer Segmentation Dashboard"
+                                    width="1328"
+                                    height="710"
+                                    loading="lazy"
+                                    decoding="async"
+                                    referrerPolicy="no-referrer"
+                                >
+                                <span class="case-study-zoom-hint">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Click to Enlarge
+                                </span>
                             </button>
-                            <a href="assets/People_Analytics_Attrition_Intelligence.xlsx" download="People_Analytics_Attrition_Intelligence.xlsx" class="btn btn-primary">
-                                <i class="fas fa-file-excel"></i> Download (.xlsx)
-                            </a>
                         </div>
-                    </div>
-                </div>
 
-                <!-- PROJECT 3: SALES PERFORMANCE DASHBOARD -->
-                <div id="sales-project" class="project-card" style="scroll-margin-top: 100px;">
-                    <div class="project-img-wrapper" onclick="openLightbox('assets/images/project-sales.png', 'Sales & Revenue Performance Dashboard')">
-                        <img src="assets/images/project-sales.png" alt="Sales Performance Dashboard">
-                        <div class="project-img-overlay">
-                            <i class="fas fa-expand"></i> Click to Enlarge Dashboard
-                        </div>
-                    </div>
-
-                    <div class="project-body">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-chart-line"></i>
+                        <div class="case-study-foot">
+                            <div class="case-study-value">
+                                <p class="case-study-label">Business Value</p>
+                                <p>
+                                    Helps marketing and commercial teams separate loyal accounts from inactive or at-risk customers. This makes it easier to prioritize retention actions and focus campaign budgets on the right segments.
+                                </p>
                             </div>
-                            <div>
-                                <h3>Sales & Revenue Performance Dashboard</h3>
+
+                            <div class="case-study-meta-col">
+                                <div>
+                                    <p class="case-study-label">Tools</p>
+                                    <div class="case-study-tools">
+                                        <span>SQL</span>
+                                        <span class="tool-sep" aria-hidden="true">·</span>
+                                        <span>Power BI</span>
+                                        <span class="tool-sep" aria-hidden="true">·</span>
+                                        <span>DAX</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-study-actions">
+                                    <a href="https://app.powerbi.com/view?r=eyJrIjoiOTNmNDQ0OTItM2YxMC00MTdhLWE0MGUtZmFmMGJjMDhlM2MzIiwidCI6ImVhZjYyNGM4LWEwYzQtNDE5NS04N2QyLTQ0M2U1ZDc1MTZjZCIsImMiOjh9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                        Live Power BI
+                                    </a>
+                                    <a href="https://github.com/ahmedrasmyabdelrheem/rfm-customer-segmentation" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    </article>
 
-                        <div class="project-tags">
-                            <span class="tech-tag primary-tag">Microsoft Excel</span>
-                            <span class="tech-tag primary-tag">Power Pivot</span>
-                            <span class="tech-tag">Star Schema</span>
-                            <span class="tech-tag">DAX</span>
-                            <span class="tech-tag">Sales KPIs</span>
+                    <!-- CASE STUDY 02: PEOPLE ANALYTICS & ATTRITION INTELLIGENCE -->
+                    <article class="case-study">
+                        <div class="case-study-head">
+                            <p class="case-study-index">Case Study 02</p>
+                            <h3>People Analytics &amp; Attrition Intelligence</h3>
+                            <p class="case-study-objective">
+                                Evaluates workforce turnover patterns across departments and tenure levels to highlight where employee attrition is concentrated.
+                            </p>
                         </div>
 
-                        <p class="project-desc">
-                            Engineered an interactive sales analytics dashboard using a relational Star Schema in Power Pivot. Modeled orders, customers, and product dimensions with custom DAX calculations to track revenue velocity, product contribution, and cross-temporal growth patterns.
-                        </p>
-
-                        <div class="project-buttons">
-                            <a href="assets/Sales_Orders_Dataset.csv" download="Sales_Orders_Dataset.csv" class="btn btn-secondary" title="Download raw orders dataset (.csv)">
-                                <i class="fas fa-file-csv"></i> Download (.csv)
-                            </a>
-                            <a href="assets/Sales_Performance_Dashboard.xlsx" download="Sales_Performance_Dashboard.xlsx" class="btn btn-primary" title="Download full Excel model (.xlsx)">
-                                <i class="fas fa-file-excel"></i> Download (.xlsx)
-                            </a>
-                            <a href="https://github.com/ahmedrasmyabdelrheem/sales-performance-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="View GitHub repository">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
+                        <div class="case-study-media-wrap">
+                            <button
+                                type="button"
+                                class="case-study-media-btn"
+                                data-lightbox-src="assets/images/project-attrition.png"
+                                data-lightbox-title="People Analytics &amp; Attrition Intelligence Dashboard"
+                                aria-label="Enlarge People Analytics and Attrition Intelligence Dashboard"
+                            >
+                                <img
+                                    src="assets/images/project-attrition.png"
+                                    alt="People Analytics Attrition Dashboard"
+                                    width="915"
+                                    height="598"
+                                    loading="lazy"
+                                    decoding="async"
+                                    referrerPolicy="no-referrer"
+                                >
+                                <span class="case-study-zoom-hint">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Click to Enlarge
+                                </span>
+                            </button>
                         </div>
-                    </div>
+
+                        <div class="case-study-foot">
+                            <div class="case-study-value">
+                                <p class="case-study-label">Business Value</p>
+                                <p>
+                                    Provides HR and management teams with a clear view of which teams and experience groups face higher departure risk. Supports targeted retention planning instead of broad, unfocused interventions.
+                                </p>
+                            </div>
+
+                            <div class="case-study-meta-col">
+                                <div>
+                                    <p class="case-study-label">Tools</p>
+                                    <div class="case-study-tools">
+                                        <span>Microsoft Excel</span>
+                                        <span class="tool-sep" aria-hidden="true">·</span>
+                                        <span>Power Pivot</span>
+                                        <span class="tool-sep" aria-hidden="true">·</span>
+                                        <span>DAX</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-study-actions">
+                                    <a href="assets/People_Analytics_Attrition_Intelligence.xlsx" download="People_Analytics_Attrition_Intelligence.xlsx" class="btn btn-primary">
+                                        <i class="fas fa-file-excel" aria-hidden="true"></i>
+                                        Download (.xlsx)
+                                    </a>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline"
+                                        data-lightbox-src="assets/images/project-attrition.png"
+                                        data-lightbox-title="People Analytics &amp; Attrition Intelligence Dashboard"
+                                    >
+                                        <i class="fas fa-expand" aria-hidden="true"></i>
+                                        Enlarge Dashboard
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CASE STUDY 03: SALES & REVENUE PERFORMANCE DASHBOARD -->
+                    <article id="sales-project" class="case-study">
+                        <div class="case-study-head">
+                            <p class="case-study-index">Case Study 03</p>
+                            <h3>Sales &amp; Revenue Performance Dashboard</h3>
+                            <p class="case-study-objective">
+                                Organizes order, customer, and product records into an executive view to track overall commercial performance over time.
+                            </p>
+                        </div>
+
+                        <div class="case-study-media-wrap">
+                            <button
+                                type="button"
+                                class="case-study-media-btn"
+                                data-lightbox-src="assets/images/project-sales.png"
+                                data-lightbox-title="Sales &amp; Revenue Performance Dashboard"
+                                aria-label="Enlarge Sales and Revenue Performance Dashboard"
+                            >
+                                <img
+                                    src="assets/images/project-sales.png"
+                                    alt="Sales Performance Dashboard"
+                                    width="1672"
+                                    height="561"
+                                    loading="lazy"
+                                    decoding="async"
+                                    referrerPolicy="no-referrer"
+                                >
+                                <span class="case-study-zoom-hint">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Click to Enlarge
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="case-study-foot">
+                            <div class="case-study-value">
+                                <p class="case-study-label">Business Value</p>
+                                <p>
+                                    Helps sales and business teams spot demand trends, compare product category performance, and identify areas that need closer attention during regular performance reviews.
+                                </p>
+                            </div>
+
+                            <div class="case-study-meta-col">
+                                <div>
+                                    <p class="case-study-label">Tools</p>
+                                    <div class="case-study-tools">
+                                        <span>Microsoft Excel</span>
+                                        <span class="tool-sep" aria-hidden="true">·</span>
+                                        <span>Power Pivot</span>
+                                        <span class="tool-sep" aria-hidden="true">·</span>
+                                        <span>DAX</span>
+                                    </div>
+                                </div>
+
+                                <div class="case-study-actions">
+                                    <a href="https://github.com/ahmedrasmyabdelrheem/sales-performance-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="View GitHub repository">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>
+                                    <a href="assets/Sales_Performance_Dashboard.xlsx" download="Sales_Performance_Dashboard.xlsx" class="btn btn-outline" title="Download full Excel model (.xlsx)">
+                                        <i class="fas fa-file-excel" aria-hidden="true"></i>
+                                        Download (.xlsx)
+                                    </a>
+                                    <a href="assets/Sales_Orders_Dataset.csv" download="Sales_Orders_Dataset.csv" class="btn btn-outline" title="Download raw orders dataset (.csv)">
+                                        <i class="fas fa-file-csv" aria-hidden="true"></i>
+                                        Download (.csv)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===================================
-         TECHNICAL SKILLS SECTION
-    =================================== -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-screwdriver-wrench"></i> Expertise</span>
-                <h2>Technical Skillset</h2>
-                <p>Core technologies, data warehousing concepts, and analytical frameworks.</p>
-            </div>
 
-            <div class="skills-grid">
-
-                <!-- SKILL 1: BI & ANALYTICS -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-chart-pie"></i>
+        <!-- ===================================
+             CERTIFICATIONS SECTION (#0B1020)
+        =================================== -->
+        <section id="certificates" class="section section-primary">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="section-kicker">
+                            <span>04</span>
+                            <span class="section-kicker-sep" aria-hidden="true">·</span>
+                            <span>Certifications</span>
                         </div>
-                        <h3>BI & Data Analytics</h3>
+                        <h2>Courses &amp; Certifications</h2>
                     </div>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> Power BI Desktop & Service</li>
-                        <li><i class="fas fa-check-circle"></i> DAX (Measures, CALCULATE, Time-Intel)</li>
-                        <li><i class="fas fa-check-circle"></i> Excel Power Pivot & Data Models</li>
-                        <li><i class="fas fa-check-circle"></i> KPI Engineering & Performance Tracking</li>
-                        <li><i class="fas fa-check-circle"></i> Data Storytelling & Visual Best Practices</li>
-                    </ul>
+                    <p class="section-lead">
+                        Verified training credentials. Click any certificate to inspect full size.
+                    </p>
                 </div>
 
-                <!-- SKILL 2: SQL & DATABASES -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>SQL & Data Querying</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> Microsoft SQL Server (SSMS)</li>
-                        <li><i class="fas fa-check-circle"></i> T-SQL Advanced Queries</li>
-                        <li><i class="fas fa-check-circle"></i> CTEs, Window Functions & Subqueries</li>
-                        <li><i class="fas fa-check-circle"></i> Views & Table Structures</li>
-                        <li><i class="fas fa-check-circle"></i> Query Performance Optimization</li>
-                    </ul>
-                </div>
+                <div class="certifications-grid">
 
-                <!-- SKILL 3: MODELING & ETL -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-card-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3>Data Modeling & ETL</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> Dimensional Modeling (Star / Snowflake)</li>
-                        <li><i class="fas fa-check-circle"></i> Power Query (ETL Transformations)</li>
-                        <li><i class="fas fa-check-circle"></i> Data Cleaning, Validation & Formatting</li>
-                        <li><i class="fas fa-check-circle"></i> Relationship Management (1:*, *:1)</li>
-                        <li><i class="fas fa-check-circle"></i> Pipeline Automation</li>
-                    </ul>
-                </div>
+                    <!-- CERTIFICATE 1: DEPI -->
+                    <article class="cert-card">
+                        <button
+                            type="button"
+                            class="cert-preview-btn"
+                            data-lightbox-src="assets/certificates/depi-cert.jpg"
+                            data-lightbox-title="Data Analytics - Microsoft Power BI | DEPI"
+                            aria-label="Inspect DEPI Power BI Certification full resolution"
+                        >
+                            <img
+                                src="assets/certificates/depi-cert.jpg"
+                                alt="DEPI Power BI Certification"
+                                loading="lazy"
+                                decoding="async"
+                                referrerPolicy="no-referrer"
+                            >
+                            <span class="cert-zoom-scrim">
+                                <span class="cert-zoom-text">
+                                    <i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i>
+                                    Enlarge
+                                </span>
+                            </span>
+                        </button>
 
-                <!-- SKILL 4: PROGRAMMING & EXPLORATION -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-card-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3>Programming & Python</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check-circle"></i> Python for Data Analysis</li>
-                        <li><i class="fas fa-check-circle"></i> Pandas & NumPy Operations</li>
-                        <li><i class="fas fa-check-circle"></i> Exploratory Data Analysis (EDA)</li>
-                        <li><i class="fas fa-check-circle"></i> AI Fundamentals (Huawei HCIA-AI)</li>
-                        <li><i class="fas fa-check-circle"></i> Git & Version Control</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================================
-         CERTIFICATIONS SECTION (HIGH CLARITY & LIGHTBOX)
-    =================================== -->
-    <section id="certificates" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-award"></i> Verification</span>
-                <h2>Courses & Certifications</h2>
-                <p>Verified professional credentials from national initiatives and global technology academies. Click any certificate to inspect full resolution.</p>
-            </div>
-
-            <div class="certifications-grid">
-
-                <!-- CERTIFICATE 1: DEPI -->
-                <div class="cert-card">
-                    <div class="cert-preview-frame" onclick="openLightbox('assets/certificates/depi-cert.jpg', 'Data Analytics - Microsoft Power BI | DEPI')">
-                        <img src="assets/certificates/depi-cert.jpg" alt="DEPI Power BI Certification">
-                        <div class="cert-zoom-overlay">
-                            <span class="cert-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Click to Enlarge</span>
-                        </div>
-                    </div>
-
-                    <div class="cert-details">
-                        <h3>Data Analytics - Microsoft Power BI</h3>
-                        <p class="cert-issuer">
-                            <i class="fas fa-building-columns"></i>
-                            Digital Egypt Pioneers Initiative (DEPI)
-                        </p>
-                        <div class="cert-footer-row">
+                        <div class="cert-details">
                             <span class="cert-date">2024 – 2025</span>
-                            <button class="cert-view-btn" onclick="openLightbox('assets/certificates/depi-cert.jpg', 'Data Analytics - Microsoft Power BI | DEPI')">
-                                <i class="fas fa-eye"></i> View Full
-                            </button>
+                            <h3>Data Analytics - Microsoft Power BI</h3>
+                            <p class="cert-issuer">Digital Egypt Pioneers Initiative (DEPI)</p>
+                            <div class="cert-footer-row">
+                                <button
+                                    type="button"
+                                    class="cert-view-btn"
+                                    data-lightbox-src="assets/certificates/depi-cert.jpg"
+                                    data-lightbox-title="Data Analytics - Microsoft Power BI | DEPI"
+                                >
+                                    <i class="fas fa-eye" aria-hidden="true"></i>
+                                    View Full
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- CERTIFICATE 2: NTI -->
-                <div class="cert-card">
-                    <div class="cert-preview-frame" onclick="openLightbox('assets/certificates/nti-cert.jpg', 'Data Analysis Training Program | NTI & Creativa')">
-                        <img src="assets/certificates/nti-cert.jpg" alt="NTI Data Analysis Certification">
-                        <div class="cert-zoom-overlay">
-                            <span class="cert-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Click to Enlarge</span>
-                        </div>
-                    </div>
+                    <!-- CERTIFICATE 2: NTI -->
+                    <article class="cert-card">
+                        <button
+                            type="button"
+                            class="cert-preview-btn"
+                            data-lightbox-src="assets/certificates/nti-cert.jpg"
+                            data-lightbox-title="Data Analysis Training Program | NTI &amp; Creativa"
+                            aria-label="Inspect NTI Data Analysis Certification full resolution"
+                        >
+                            <img
+                                src="assets/certificates/nti-cert.jpg"
+                                alt="NTI Data Analysis Certification"
+                                loading="lazy"
+                                decoding="async"
+                                referrerPolicy="no-referrer"
+                            >
+                            <span class="cert-zoom-scrim">
+                                <span class="cert-zoom-text">
+                                    <i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i>
+                                    Enlarge
+                                </span>
+                            </span>
+                        </button>
 
-                    <div class="cert-details">
-                        <h3>Data Analysis Training Program</h3>
-                        <p class="cert-issuer">
-                            <i class="fas fa-building-columns"></i>
-                            National Telecommunication Institute (NTI) & Creativa
-                        </p>
-                        <div class="cert-footer-row">
+                        <div class="cert-details">
                             <span class="cert-date">March 2026</span>
-                            <button class="cert-view-btn" onclick="openLightbox('assets/certificates/nti-cert.jpg', 'Data Analysis Training Program | NTI & Creativa')">
-                                <i class="fas fa-eye"></i> View Full
-                            </button>
+                            <h3>Data Analysis Training Program</h3>
+                            <p class="cert-issuer">National Telecommunication Institute (NTI) &amp; Creativa</p>
+                            <div class="cert-footer-row">
+                                <button
+                                    type="button"
+                                    class="cert-view-btn"
+                                    data-lightbox-src="assets/certificates/nti-cert.jpg"
+                                    data-lightbox-title="Data Analysis Training Program | NTI &amp; Creativa"
+                                >
+                                    <i class="fas fa-eye" aria-hidden="true"></i>
+                                    View Full
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- CERTIFICATE 3: HUAWEI -->
-                <div class="cert-card">
-                    <div class="cert-preview-frame" onclick="openLightbox('assets/certificates/huawei-cert.jpg', 'HCIA-AI V4.0 Course Certificate | Huawei ICT Academy')">
-                        <img src="assets/certificates/huawei-cert.jpg" alt="Huawei HCIA-AI Certification">
-                        <div class="cert-zoom-overlay">
-                            <span class="cert-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Click to Enlarge</span>
-                        </div>
-                    </div>
+                    <!-- CERTIFICATE 3: HUAWEI -->
+                    <article class="cert-card">
+                        <button
+                            type="button"
+                            class="cert-preview-btn"
+                            data-lightbox-src="assets/certificates/huawei-cert.jpg"
+                            data-lightbox-title="HCIA-AI V4.0 Course Certificate | Huawei ICT Academy"
+                            aria-label="Inspect Huawei HCIA-AI Certification full resolution"
+                        >
+                            <img
+                                src="assets/certificates/huawei-cert.jpg"
+                                alt="Huawei HCIA-AI Certification"
+                                loading="lazy"
+                                decoding="async"
+                                referrerPolicy="no-referrer"
+                            >
+                            <span class="cert-zoom-scrim">
+                                <span class="cert-zoom-text">
+                                    <i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i>
+                                    Enlarge
+                                </span>
+                            </span>
+                        </button>
 
-                    <div class="cert-details">
-                        <h3>HCIA-AI V4.0 Course Certificate</h3>
-                        <p class="cert-issuer">
-                            <i class="fas fa-building-columns"></i>
-                            Huawei ICT Academy
-                        </p>
-                        <div class="cert-footer-row">
+                        <div class="cert-details">
                             <span class="cert-date">November 2025</span>
-                            <button class="cert-view-btn" onclick="openLightbox('assets/certificates/huawei-cert.jpg', 'HCIA-AI V4.0 Course Certificate | Huawei ICT Academy')">
-                                <i class="fas fa-eye"></i> View Full
-                            </button>
+                            <h3>HCIA-AI V4.0 Course Certificate</h3>
+                            <p class="cert-issuer">Huawei ICT Academy</p>
+                            <div class="cert-footer-row">
+                                <button
+                                    type="button"
+                                    class="cert-view-btn"
+                                    data-lightbox-src="assets/certificates/huawei-cert.jpg"
+                                    data-lightbox-title="HCIA-AI V4.0 Course Certificate | Huawei ICT Academy"
+                                >
+                                    <i class="fas fa-eye" aria-hidden="true"></i>
+                                    View Full
+                                </button>
+                            </div>
                         </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================
+             CONTACT SECTION (#111A2E)
+        =================================== -->
+        <section id="contact" class="section section-secondary">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-aside">
+                        <div class="section-kicker">
+                            <span>05</span>
+                            <span class="section-kicker-sep" aria-hidden="true">·</span>
+                            <span>Contact</span>
+                        </div>
+                        <h2>Get in Touch</h2>
+                        <p>
+                            Open to Data Analyst and Business Intelligence roles. Reach out directly or send a message using the form.
+                        </p>
+
+                        <div class="contact-direct-links">
+                            <a href="mailto:ahmed.rasmy.abdelrheem@gmail.com" class="contact-direct-link">
+                                <span>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    ahmed.rasmy.abdelrheem@gmail.com
+                                </span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ahmedrasmyabdelrheem" target="_blank" rel="noopener noreferrer" class="contact-direct-link">
+                                <span>
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    LinkedIn
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/ahmedrasmyabdelrheem" target="_blank" rel="noopener noreferrer" class="contact-direct-link">
+                                <span>
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    GitHub
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <a href="assets/Ahmed_Rasmy_CV.pdf" download="Ahmed_Rasmy_CV.pdf" class="contact-direct-link">
+                                <span>
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                    Download CV (PDF)
+                                </span>
+                                <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <form action="https://formsubmit.co/ahmed.rasmy.abdelrheem@gmail.com" method="POST" class="contact-form">
+                            <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" name="email" id="email" placeholder="name@company.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject" placeholder="Data Analyst / BI Opportunity" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- ===================================
-         CONTACT SECTION
+         FOOTER (#0B1020)
     =================================== -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-paper-plane"></i> Get in Touch</span>
-                <h2>Let's Collaborate</h2>
-                <p>Have an open analytics role, business inquiry, or project? I'd love to hear from you.</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Ahmed Rasmy. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certificates">Certifications</a>
+                <a href="#contact">Contact</a>
             </div>
-
-            <div class="contact-container">
-                <form action="https://formsubmit.co/ahmed.rasmy.abdelrheem@gmail.com" method="POST" class="contact-form">
-                    <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" id="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" name="email" id="email" placeholder="name@company.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="Discussing Data & BI Opportunities" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Write your message or inquiry here..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================================
-         FOOTER
-    =================================== -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Ahmed Rasmy. All rights reserved. • Built for Data & BI Impact</p>
         </div>
     </footer>
 
     <!-- ===================================
          LIGHTBOX MODAL COMPONENT
     =================================== -->
-    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightboxOnBackdrop(event)">
+    <div
+        id="lightboxModal"
+        class="lightbox-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="lightboxTitle"
+    >
         <div class="lightbox-content">
             <div class="lightbox-header">
                 <div id="lightboxTitle" class="lightbox-title">Image Preview</div>
-                <button class="lightbox-close" onclick="closeLightbox()" title="Close (Esc)">
-                    <i class="fas fa-xmark"></i>
+                <button id="lightboxCloseBtn" type="button" class="lightbox-close" aria-label="Close preview" title="Close (Esc)">
+                    <i class="fas fa-xmark" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="lightbox-body">
                 <img id="lightboxImg" src="" alt="Enlarged Preview">
             </div>
             <div class="lightbox-footer">
-                <span><i class="fas fa-circle-info"></i> Press ESC or click outside to close</span>
-                <a id="lightboxRawLink" href="" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">
-                    <i class="fas fa-external-link-alt"></i> Open Raw Image
+                <span>Press ESC or click outside to close</span>
+                <a id="lightboxRawLink" href="" target="_blank" rel="noopener noreferrer" class="lightbox-raw-link">
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    Open Raw Image
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- ===================================
-         CLIENT JAVASCRIPT
-    =================================== -->
-    <script>
-        // Lightbox Modal Functions
-        function openLightbox(imageSrc, title) {
-            const modal = document.getElementById('lightboxModal');
-            const img = document.getElementById('lightboxImg');
-            const titleEl = document.getElementById('lightboxTitle');
-            const rawLink = document.getElementById('lightboxRawLink');
-
-            img.src = imageSrc;
-            img.alt = title;
-            titleEl.textContent = title;
-            rawLink.href = imageSrc;
-
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const modal = document.getElementById('lightboxModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function closeLightboxOnBackdrop(e) {
-            if (e.target.id === 'lightboxModal') {
-                closeLightbox();
-            }
-        }
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-
-        // Navigation Active Link on Scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav ul li a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
-                if (pageYOffset >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
