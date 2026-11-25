@@ -53,6 +53,41 @@
         });
     });
 
+    // Multi-Page Case Study Preview Tabs
+    document.querySelectorAll('[data-preview-tabs]').forEach((tabList) => {
+        const targetId = tabList.getAttribute('data-preview-tabs');
+        const previewBtn = targetId ? document.getElementById(targetId) : null;
+        const previewImg = previewBtn ? previewBtn.querySelector('img') : null;
+        if (!previewBtn || !previewImg) return;
+
+        const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                const src = tab.getAttribute('data-src');
+                const alt = tab.getAttribute('data-alt') || '';
+                const title = tab.getAttribute('data-title') || alt;
+                const width = tab.getAttribute('data-width');
+                const height = tab.getAttribute('data-height');
+                if (!src) return;
+
+                tabs.forEach((item) => {
+                    const isActive = item === tab;
+                    item.classList.toggle('is-active', isActive);
+                    item.setAttribute('aria-selected', String(isActive));
+                });
+
+                previewImg.src = src;
+                previewImg.alt = alt;
+                if (width) previewImg.width = Number(width);
+                if (height) previewImg.height = Number(height);
+
+                previewBtn.setAttribute('data-lightbox-src', src);
+                previewBtn.setAttribute('data-lightbox-title', title);
+                previewBtn.setAttribute('aria-label', `Enlarge ${alt}`);
+            });
+        });
+    });
+
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', closeLightbox);
     }

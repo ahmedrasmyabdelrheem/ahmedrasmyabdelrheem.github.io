@@ -636,6 +636,45 @@ textarea:focus-visible,
     padding: 0 40px;
 }
 
+.case-study-tabs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    margin-bottom: 14px;
+    background-color: var(--bg-frame);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+}
+
+.case-study-tab {
+    min-height: 36px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    transition: background-color var(--duration-fast) var(--ease-out),
+        color var(--duration-fast) var(--ease-out),
+        border-color var(--duration-fast) var(--ease-out);
+}
+
+.case-study-tab:hover {
+    color: var(--text-main);
+    background-color: rgba(143, 165, 255, 0.06);
+}
+
+.case-study-tab.is-active {
+    background-color: var(--bg-card);
+    border-color: var(--border-accent);
+    color: var(--text-main);
+    font-weight: 600;
+}
+
 .case-study-media-btn {
     position: relative;
     display: block;
@@ -1409,6 +1448,20 @@ textarea:focus-visible,
 
     .case-study-media-wrap {
         padding: 0 12px;
+    }
+
+    .case-study-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    .case-study-tab {
+        min-height: 40px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        text-align: center;
+        white-space: normal;
     }
 
     .case-study-media-btn {
